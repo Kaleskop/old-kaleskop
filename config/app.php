@@ -41,6 +41,22 @@ return [
 
     'debug' => env('APP_DEBUG', false),
 
+    'debug_blacklist' => [
+     '_ENV' => [
+      'APP_KEY', 'DB_HOST', 'DB_USERNAME', 'DB_PASSWORD', 'MAIL_USERNAME',
+      'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'STRIPE_KEY', 'STRIPE_SECRET',
+      'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'AWS_BUCKET', 'SQS_KEY',
+      'SQS_SECRET', 'SQS_PREFIX', 'SQS_REGION', 'SES_KEY', 'SES_SECRET'
+     ],
+     '_SERVER' => [
+      'USER', 'SERVER_ADMIN', 'REMOTE_ADDR', 'SERVER_ADDR',
+      'APP_KEY', 'DB_HOST', 'DB_USERNAME', 'DB_PASSWORD', 'MAIL_USERNAME',
+      'MAIL_PASSWORD', 'MAIL_FROM_ADDRESS', 'STRIPE_KEY', 'STRIPE_SECRET',
+      'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'AWS_BUCKET', 'SQS_KEY',
+      'SQS_SECRET', 'SQS_PREFIX', 'SQS_REGION', 'SES_KEY', 'SES_SECRET'
+     ],
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application URL
