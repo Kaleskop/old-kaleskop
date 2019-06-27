@@ -11,6 +11,9 @@
 |
 */
 
+// Account
+Route::get( '/account/business', 'AccountController@business' )->name( 'account.business' );
+
 // Business
 Route::post( '/account/business', 'BusinessController@store' )->name( 'business.store' );
 Route::get( '/business', 'BusinessController@index' )->name( 'business.index' );
