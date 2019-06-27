@@ -9,6 +9,10 @@ use Storage;
 
 class VideosController extends Controller {
 
+ public function __construct() {
+  $this->middleware( 'uploadLimit' )->only( 'upload' );
+ }
+
  public function upload( Request $request ) {
   $this->validate( $request, [
    'uservideo' => [ 'required', 'file' ]
