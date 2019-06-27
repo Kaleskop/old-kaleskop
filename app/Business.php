@@ -53,4 +53,13 @@ class Business extends Model {
  public function manager() {
   return $this->belongsTo( User::class, 'user_id' );
  }
+
+ /**
+  * A business may have many videos
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function videos() {
+  return $this->hasMany( Video::class, 'business_id' );
+ }
 }
