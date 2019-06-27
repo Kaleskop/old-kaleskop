@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
+use Storage;
+
 class Business extends Model {
 
  /**
@@ -32,6 +34,11 @@ class Business extends Model {
 
   static::creating( function( $model ) {
    $model->folder = (string) Str::orderedUuid();
+  } );
+
+  static::created( function( $model ) {
+   // - create folder on storage
+   Storage::disk( 's3' )->makeDirectory( $model->folder );
   } );
  }
 
