@@ -62,4 +62,20 @@ class Business extends Model {
  public function videos() {
   return $this->hasMany( Video::class, 'business_id' );
  }
+
+
+ // - checks
+
+ /**
+  * Checks if business is over the limit for uploaded files
+  */
+ public function isOverLimit() {
+  $limit = (1000*1024*1024) * 0.9;
+  $amount = $this->videos()->sum( 'size' );
+
+  if ( $amount > $limit ) {
+   return true;
+  }
+  return false;
+ }
 }
