@@ -38,5 +38,6 @@ class BusinessTest extends TestCase {
   $model = Business::where( 'vat', $business->vat )->first();
 
   $this->assertDatabaseHas( 'businesses', [ 'id'=>$model->id, 'folder'=>$model->folder ] );
+  Storage::disk( 's3' )->assertExists( $model->folder );
  }
 }
