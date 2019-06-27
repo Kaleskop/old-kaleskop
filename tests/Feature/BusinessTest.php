@@ -8,12 +8,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use App\Business;
 use App\User;
+use Storage;
 
 class BusinessTest extends TestCase {
 
  use RefreshDatabase;
 
  public function test_AuthUser_CanRegisterABusiness_DatabaseHasBusiness() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->make();
@@ -25,6 +28,8 @@ class BusinessTest extends TestCase {
  }
 
  public function test_Business_RegistrationAssignUUID_DatabaseHasFolder() {
+  Storage::fake( 's3' );
+
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->make();
