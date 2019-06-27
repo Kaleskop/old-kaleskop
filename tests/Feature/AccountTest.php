@@ -23,6 +23,7 @@ class AccountTest extends TestCase {
   $response = $this->post( route( 'register' ), $user );
 
   $this->assertDatabaseHas( 'users', [ 'email'=>$user['email'] ] );
+  $response->assertRedirect( route( 'account.index' ) );
  }
 
  public function test_User_CanLoginIn_IsAuthenticated() {
@@ -32,6 +33,7 @@ class AccountTest extends TestCase {
   $response = $this->post( route( 'login' ), $data );
 
   $this->assertAuthenticatedAs( $user );
+  $response->assertRedirect( route( 'account.index' ) );
  }
 
  public function test_AuthUser_CanLogOut_IsLoggedOut() {
@@ -42,5 +44,6 @@ class AccountTest extends TestCase {
   $response = $this->post( route( 'logout' ) );
 
   $this->assertGuest();
+  $response->assertRedirect( route( 'website.homepage' ) );
  }
 }
