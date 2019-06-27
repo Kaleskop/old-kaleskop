@@ -10,3 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Business
+Route::post( '/account/business', 'BusinessController@store' )->name( 'business.store' );
+Route::get( '/business', 'BusinessController@index' )->name( 'business.index' );
