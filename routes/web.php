@@ -11,6 +11,9 @@
 |
 */
 
+// Business
+Route::get( '/business/subscriptions', 'BusinessController@subscriptions' )->name( 'business.subscriptions' );
+
 // Videos
 Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
