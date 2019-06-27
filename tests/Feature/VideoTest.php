@@ -26,6 +26,7 @@ class VideoTest extends TestCase {
   $response = $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file ] );
 
   Storage::disk( 's3' )->assertExists( "{$business->folder}/videos/{$file->hashName()}" );
+  $response->assertRedirect( route( 'videos.index' ) );
  }
 
  public function test_BusinessUser_CanDeleteUploadedVideos_FileMissing() {
