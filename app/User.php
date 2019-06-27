@@ -48,4 +48,16 @@ class User extends Authenticatable {
  public function business() {
   return $this->hasOne( Business::class, 'user_id' );
  }
+
+
+ // - checks
+
+ /**
+  * Checks if the user has a business
+  *
+  * @return bool
+  */
+ public function hasBusiness() {
+  return $this->business()->exists();
+ }
 }
