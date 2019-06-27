@@ -29,7 +29,7 @@ class VideosController extends Controller {
   ];
   $video = $business->videos()->create( $model );
 
-  return back();
+  return redirect()->route( 'videos.index' );
  }
 
  public function destroy( Request $request, Video $video ) {
