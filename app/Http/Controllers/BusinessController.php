@@ -31,4 +31,11 @@ class BusinessController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'business.index-page' ] )
    ->with( 'business', $business );
  }
+
+ public function subscriptions() {
+  $business = Auth::user()->business;
+
+  return view( 'layouts.wrapper', [ 'page'=>'business.subscriptions-page' ] )
+   ->with( 'business', $business );
+ }
 }
