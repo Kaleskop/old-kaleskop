@@ -27,6 +27,19 @@ class BusinessTest extends TestCase {
   $response->assertRedirect( route( 'business.index' ) );
  }
 
+ public function test_BusinessUser_CannotRegisterOtherBusiness_RedirectTo() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->make();
+  $this->post( route( 'business.store' ), $business->toArray() );
+
+  $response = $this->get( route( 'account.business' ) );
+
+  $response->assertRedirect( route( 'business.index' ) );
+ }
+
  public function test_Business_RegistrationAssignUUID_DatabaseHasFolder() {
   Storage::fake( 's3' );
 
