@@ -11,6 +11,7 @@
   @stack( 'stylesheets' )
 
   <!-- Javascript -->
+  <script src="{{ asset( 'js/app.js' ) }}" defer></script>
   @stack( 'scripts' )
 
   <title>{{ config( 'app.name' ) }}{{ isset( $title ) ? " | {$title}" : '' }}</title>
