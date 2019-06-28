@@ -20,5 +20,12 @@ class AccountController extends Controller {
    ->with( 'user', $user );
  }
 
- public function business() {}
+ public function business() {
+  $countries = Lang::get( 'countries.UE' );
+  $user = Auth::user();
+
+  return view( 'layouts.wrapper', [ 'page'=>'account.business-page' ] )
+  ->with( 'countries', $countries )
+  ->with( 'user', $user );
+ }
 }
