@@ -18,3 +18,4 @@ Route::get( '/business/subscriptions', 'BusinessController@subscriptions' )->nam
 Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
+Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
