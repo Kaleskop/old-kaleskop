@@ -13,5 +13,12 @@ class AccountController extends Controller {
 
  // - view actions
 
+ public function index() {
+  $user = Auth::user();
+
+  return view( 'layouts.wrapper', [ 'page'=>'account.index-page' ] )
+   ->with( 'user', $user );
+ }
+
  public function business() {}
 }
