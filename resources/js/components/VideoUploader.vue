@@ -12,6 +12,28 @@
      add-index
     >Add file</file-upload>
    </form>
+
+   <div>
+    <div v-for="file in files" v-bind:key="file.index">
+     <div v-if="file.success">
+      <p>Mission complete!</p>
+     </div>
+     <div v-else>
+      <div>
+       <div>
+        <button type="button">Remove</button>
+       </div>
+
+       <p>{{ file.name }}</p>
+       <p><span>{{ file.size }}</span> <span>{{ file.type }}</span></p>
+      </div>
+
+      <div>
+       <span>{{ file.progress }}%</span>
+      </div>
+     </div>
+    </div>
+   </div>
   </div>
 
   <div>
