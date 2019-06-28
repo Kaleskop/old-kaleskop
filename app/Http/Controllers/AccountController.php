@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+use Lang;
+
 class AccountController extends Controller {
 
  public function __construct() {
