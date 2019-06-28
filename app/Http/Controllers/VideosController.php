@@ -52,4 +52,8 @@ class VideosController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'videos.index-page' ] )
    ->with( 'videos', $videos );
  }
+
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'videos.create-page' ] );
+ }
 }
