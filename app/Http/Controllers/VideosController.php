@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Video;
 use Storage;
+use Auth;
 
 class VideosController extends Controller {
 
