@@ -1,6 +1,23 @@
 <template>
 
-<div></div>
+<div>
+ <div>
+  <div>
+   <file-upload
+    name="uservideo" accept="video/*" class="video-uploader" post-action="/videos/upload"
+    ref="upload" v-model="files"
+    v-bind:headers="headers"
+    v-bind:size="size"
+    add-index
+   >Add file</file-upload>
+  </div>
+
+  <div>
+   <button type="button" v-if="!$refs.upload || !$refs.upload.active" @click="$refs.upload.active = true">Upload</button>
+   <button type="button" v-else @click="$refs.upload.active = false">Stop</button>
+  </div>
+ </div>
+</div>
 
 </template>
 
