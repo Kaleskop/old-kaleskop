@@ -11,6 +11,8 @@
   @stack( 'stylesheets' )
 
   <!-- Javascript -->
+  @include( 'vue-templates.vue-go' )
+
   <script src="{{ asset( 'js/app.js' ) }}" defer></script>
   @stack( 'scripts' )
 
