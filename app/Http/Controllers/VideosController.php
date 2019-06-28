@@ -42,4 +42,14 @@ class VideosController extends Controller {
 
   return back();
  }
+
+
+ // - view actions
+
+ public function index() {
+  $videos = Auth::user()->business->videos()->latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'videos.index-page' ] )
+   ->with( 'videos', $videos );
+ }
 }
