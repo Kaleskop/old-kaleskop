@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Business;
+use Auth;
+
 class BusinessController extends Controller {
 
  public function __construct() {
