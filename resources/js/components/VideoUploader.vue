@@ -16,6 +16,12 @@ export default {
   return {
    "files": []
   }
+ },
+
+ "computed": {
+  "headers": function() {
+   return { "X-CSRF-Token": window.KALESKOP.csrfToken }
+  }
  }
 }
 </script>
