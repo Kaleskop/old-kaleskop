@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 
 use URL;
+use Illuminate\Support\Facades\Blade;
+use Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +28,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         URL::forceScheme( 'https' );
+
+        Blade::if( 'business', function() {
+         return Auth::check()
+          && Auth::user()->hasBusiness();
+        } );
     }
 }
