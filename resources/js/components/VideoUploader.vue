@@ -21,7 +21,7 @@
      <div v-else>
       <div>
        <div>
-        <button type="button">Remove</button>
+        <button type="button" v-on:click.prevent="remove(file)">Remove</button>
        </div>
 
        <p>{{ file.name }}</p>
@@ -64,6 +64,12 @@ export default {
  "computed": {
   "headers": function() {
    return { "X-CSRF-Token": window.KALESKOP.csrfToken }
+  }
+ },
+
+ "methods": {
+  remove(file) {
+   this.$refs.upload.remove(file)
   }
  }
 }
