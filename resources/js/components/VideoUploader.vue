@@ -28,7 +28,7 @@
        <p><span>{{ file.size }}</span> <span>{{ file.type }}</span></p>
       </div>
 
-      <div>
+      <div v-if="file.active || file.progress !== '0.00'">
        <span>{{ file.progress }}%</span>
       </div>
      </div>
