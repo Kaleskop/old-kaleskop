@@ -14,7 +14,9 @@ export default {
 
  data() {
   return {
-   "files": []
+   "files": [],
+   "minSize": 1024*1024*7,
+   "size": 1024*1024*1000*0.9
   }
  },
 
