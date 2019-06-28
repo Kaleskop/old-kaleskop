@@ -3,13 +3,15 @@
 <div>
  <div>
   <div>
-   <file-upload
-    name="uservideo" accept="video/*" class="video-uploader" post-action="/videos/upload"
-    ref="upload" v-model="files"
-    v-bind:headers="headers"
-    v-bind:size="size"
-    add-index
-   >Add file</file-upload>
+   <form>
+    <file-upload
+     name="uservideo" accept="video/*" class="video-uploader" post-action="/videos/upload"
+     ref="upload" v-model="files"
+     v-bind:headers="headers"
+     v-bind:size="size"
+     add-index
+    >Add file</file-upload>
+   </form>
   </div>
 
   <div>
