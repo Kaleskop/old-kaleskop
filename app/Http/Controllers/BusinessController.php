@@ -21,4 +21,14 @@ class BusinessController extends Controller {
 
   return redirect()->route( 'business.index' );
  }
+
+
+ // - view actions
+
+ public function index() {
+  $business = Auth::user()->business;
+
+  return view( 'layouts.wrapper', [ 'page'=>'business.index-page' ] )
+   ->with( 'business', $business );
+ }
 }
