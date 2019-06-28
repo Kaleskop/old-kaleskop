@@ -9,6 +9,7 @@
      ref="upload" v-model="files"
      v-bind:headers="headers"
      v-bind:size="size"
+     v-on:input-file="inputFile"
      add-index
     >Add file</file-upload>
    </form>
@@ -70,6 +71,38 @@ export default {
  "methods": {
   remove(file) {
    this.$refs.upload.remove(file)
+  },
+  inputFile(newFile, oldFile) {
+   if (newFile && !oldFile) {
+    // add
+    console.log('add');
+   }
+   if (newFile && oldFile) {
+    // update
+    console.log('update');
+
+    // before send
+    if (newFile.active && !oldFile.active) {
+     if (newFile.size >= 0 && newFile.size < this.minSize) {
+      this.$refs.upload.update(newFile, { "error": 'size' });
+      console.log('size', newFile.size);
+     }
+    }
+
+    // Upload progress
+    if (newFile.progress !== oldFile.progress) {
+     console.log('progress', newFile.progress);
+    }
+
+    // Uploaded successfully
+    if (newFile.success !== oldFile.success) {
+     console.log('success', newFile.success);
+    }
+   }
+   if (!newFile && oldFile) {
+    // remove
+    console.log('remove');
+   }
   }
  }
 }
