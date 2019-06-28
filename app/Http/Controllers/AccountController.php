@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 class AccountController extends Controller {
 
  public function __construct() {
+  $this->middleware( 'auth' );
   $this->middleware( 'withBusiness' )->only( 'business' );
  }
 
