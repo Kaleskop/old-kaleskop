@@ -30,3 +30,9 @@ Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
 Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
+
+// Terms
+Route::get( '/terms/general', 'TermsController@general' )->name( 'terms.general' );
+Route::get( '/terms/account', 'TermsController@account' )->name( 'terms.account' );
+Route::get( '/terms/business', 'TermsController@business' )->name( 'terms.business' );
+Route::get( '/terms/kas', 'TermsController@kas' )->name( 'terms.kas' );
