@@ -1,30 +1,30 @@
 <form method="POST" action="{{ route( 'register' ) }}">
  @csrf
 
- <fieldset>
-  <legend>{{ __( 'Sign up' ) }}</legend>
+ <fieldset class="mb-8 p-4 border border-transparent">
+  <legend class="p-2 font-light italic">{{ __( 'Sign up' ) }}</legend>
 
-  <div>
-   <label for="name">{{ __( 'Name' ) }}</label>
-   <input type="text" name="name" id="name" value="{{ old( 'name' ) }}" required autofocus />
+  <div class="mb-4">
+   <label for="name" class="block mb-2 font-bold">{{ __( 'Name' ) }}</label>
+   <input type="text" name="name" id="name" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" value="{{ old( 'name' ) }}" required autofocus />
 
    @if ( $errors->has( 'name' ) )
     <p>{{ $errors->first( 'name' ) }}</p>
    @endif
   </div>
 
-  <div>
-   <label for="email">{{ __( 'Email address' ) }}</label>
-   <input type="email" name="email" id="email" required />
+  <div class="mb-4">
+   <label for="email" class="block mb-2 font-bold">{{ __( 'Email address' ) }}</label>
+   <input type="email" name="email" id="email" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" required />
 
    @if ( $errors->has( 'email' ) )
     <p>{{ $errors->first( 'email' ) }}</p>
    @endif
   </div>
 
-  <div>
-   <label for="password">{{ __( 'Password' ) }}</label>
-   <input type="password" name="password" id="password" required />
+  <div class="mb-4">
+   <label for="password" class="block mb-2 font-bold">{{ __( 'Password' ) }}</label>
+   <input type="password" name="password" id="password" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" required />
 
    @if ( $errors->has( 'password' ) )
     <p>{{ $errors->first( 'password' ) }}</p>
@@ -32,17 +32,17 @@
   </div>
 
   <div>
-   <label for="password_confirmation">{{ __( 'Confirm password' ) }}</label>
-   <input type="password" name="password_confirmation" id="password_confirmation" required />
+   <label for="password_confirmation" class="block mb-2 font-bold">{{ __( 'Confirm password' ) }}</label>
+   <input type="password" name="password_confirmation" id="password_confirmation" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" required />
   </div>
  </fieldset>
 
- <fieldset>
-  <legend>{{ __( 'Terms & Conditions' ) }}</legend>
+ <fieldset class="mb-8 p-4 border border-transparent">
+  <legend class="p-2 font-light italic">{{ __( 'Terms & Conditions' ) }}</legend>
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
-   <label for="terms">{{ __( 'I agree with the' ) }} <a href="{{ route( 'terms.account' ) }}" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
+   <label for="terms">{{ __( 'I agree with the' ) }} <a href="{{ route( 'terms.account' ) }}" class="underline" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
 
    @if ( $errors->has( 'terms' ) )
     <p>{{ $errors->first( 'terms' ) }}</p>
@@ -50,5 +50,5 @@
   </div>
  </fieldset>
 
- <button type="submit">{{ __( 'Register' ) }}</button>
+ <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center">{{ __( 'Register' ) }}</button>
 </form>
