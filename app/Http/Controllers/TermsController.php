@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 class TermsController extends Controller {
 
+ public function __construct() {
+  $this->middleware( 'auth' )->only( 'business' );
+ }
 
  // - view actions
 
