@@ -1,8 +1,8 @@
 <template>
 
-<div>
+<div class="inline-block rounded border-2 border-transparent shadow-md">
  <div>
-  <div>
+  <div class="relative pt-8 pb-4 px-4">
    <form>
     <file-upload
      name="uservideo" accept="video/*" class="video-uploader" post-action="/videos/upload"
@@ -16,30 +16,30 @@
 
    <div>
     <div v-for="file in files" v-bind:key="file.index">
-     <div v-if="file.success">
-      <p>Mission complete!</p>
+     <div v-if="file.success" class="my-4 p-2">
+      <p class="font-medium text-2xl">Mission complete!</p>
      </div>
      <div v-else>
-      <div>
-       <div>
+      <div class="relative p-2 border border-transparent">
+       <div class="mb-4 text-center">
         <button type="button" v-on:click.prevent="remove(file)">Remove</button>
        </div>
 
-       <p>{{ file.name }}</p>
-       <p><span>{{ file.size }}</span> <span>{{ file.type }}</span></p>
+       <p class="mb-2 font-bold">{{ file.name }}</p>
+       <p class="text-sm"><span>{{ file.size }}</span> <span>{{ file.type }}</span></p>
       </div>
 
-      <div v-if="file.active || file.progress !== '0.00'">
-       <span>{{ file.progress }}%</span>
+      <div v-if="file.active || file.progress !== '0.00'" class="py-4 text-center">
+       <span class="font-semibold text-3xl">{{ file.progress }}%</span>
       </div>
      </div>
     </div>
    </div>
   </div>
 
-  <div>
-   <button type="button" v-if="!$refs.upload || !$refs.upload.active" @click="$refs.upload.active = true">Upload</button>
-   <button type="button" v-else @click="$refs.upload.active = false">Stop</button>
+  <div class="relative py-6 px-4 border-t border-transparent text-center">
+   <button type="button" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center" v-if="!$refs.upload || !$refs.upload.active" @click="$refs.upload.active = true">Upload</button>
+   <button type="button" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center" v-else @click="$refs.upload.active = false">Stop</button>
   </div>
  </div>
 </div>
