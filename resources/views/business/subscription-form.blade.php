@@ -6,7 +6,11 @@
 
   <div class="flex flex-col md:flex-wrap md:flex-row">
    @forelse( $plans as $plan )
+<<<<<<< HEAD
     <div class="plan relative w-full mb-8 md:mx-4 px-4 pt-5 pb-4 flex flex-col md:flex-1 border border-transparent rounded text-center">
+=======
+    <div class="relative w-full mb-8 md:mx-4 px-4 pt-5 pb-4 flex flex-col md:flex-1 border border-transparent rounded text-center">
+>>>>>>> style business subscription-form
      <input type="radio" name="plan" id="{{ $plan->plan_id }}" class="hidden" value="{{ $plan->plan_id }}" />
      <label for="{{ $plan->plan_id }}" class="cursor-pointer mb-2 py-6">
       <span class="leading-none font-semibold text-5xl">{{ $plan->price }}</span>
