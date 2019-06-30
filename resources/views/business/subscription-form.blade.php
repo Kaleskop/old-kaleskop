@@ -1,18 +1,18 @@
 <form action="{{ route( 'subscriptions.subscribe' ) }}" method="POST" id="checkout-form">
  @csrf
 
- <fieldset>
-  <legend>{{ __( 'Plans details' ) }}</legend>
+ <fieldset class="mb-8 p-4 border border-transparent">
+  <legend class="p-2 font-light italic">{{ __( 'Plans details' ) }}</legend>
 
-  <div>
+  <div class="flex flex-col md:flex-wrap md:flex-row">
    @forelse( $plans as $plan )
-    <div>
-     <input type="radio" name="plan" id="{{ $plan->plan_id }}" value="{{ $plan->plan_id }}" />
-     <label for="{{ $plan->plan_id }}">
-      <span>{{ $plan->price }}</span>
-      <span>{{ $plan->name }}</span>
+    <div class="relative w-full mb-8 md:mx-4 px-4 pt-5 pb-4 flex flex-col md:flex-1 border border-transparent rounded text-center">
+     <input type="radio" name="plan" id="{{ $plan->plan_id }}" class="hidden" value="{{ $plan->plan_id }}" />
+     <label for="{{ $plan->plan_id }}" class="cursor-pointer mb-2 py-6">
+      <span class="leading-none font-semibold text-5xl">{{ $plan->price }}</span>
+      <span class="font-bold uppercase">{{ $plan->name }}</span>
      </label>
-     <div>{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</div>
+     <div class="leading-relaxed text-sm">{{ Illuminate\Mail\Markdown::parse( $plan->description ) }}</div>
     </div>
 
    @empty
@@ -26,10 +26,10 @@
   @endif
  </fieldset>
 
- <fieldset>
-  <legend>{{ __( 'Payment details' ) }}</legend>
+ <fieldset class="mb-8 p-4 border border-transparent">
+  <legend class="p-2 font-light italic">{{ __( 'Payment details' ) }}</legend>
 
-  <div>
+  <div class="mb-4">
    <label for="card-element">{{ __( 'Credit or debit card' ) }}</label>
    <div id="card-element"></div>
    <div id="card-errors" role="alert"></div>
@@ -37,8 +37,8 @@
   </div>
 
   <div>
-   <label for="coupon">{{ __( 'Coupon' ) }}</label>
-   <input type="text" name="coupon" id="coupon" />
+   <label for="coupon" class="block mb-2 font-bold">{{ __( 'Coupon' ) }}</label>
+   <input type="text" name="coupon" id="coupon" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" />
 
    @if ( $errors->has( 'coupon' ) )
     <p>{{ $errors->first( 'coupon' ) }}</p>
@@ -46,5 +46,5 @@
   </div>
  </fieldset>
 
- <button type="submit">{{ __( 'Subscribe' ) }}</button>
+ <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center">{{ __( 'Subscribe' ) }}</button>
 </form>
