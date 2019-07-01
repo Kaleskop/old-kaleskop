@@ -18,3 +18,9 @@ Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
 
 // Account
 Route::get( '/account', 'AccountController@index' )->name( 'account.index' );
+Route::get( '/account/business', 'AccountController@business' )->name( 'account.business' );
+
+// Business
+Route::post( '/account/business', 'BusinessController@store' )->name( 'business.store' );
+Route::get( '/business', 'BusinessController@index' )->name( 'business.index' );
+Route::get( '/business/subscriptions', 'BusinessController@subscriptions' )->name( 'business.subscriptions' );
