@@ -24,3 +24,9 @@ Route::get( '/account/business', 'AccountController@business' )->name( 'account.
 Route::post( '/account/business', 'BusinessController@store' )->name( 'business.store' );
 Route::get( '/business', 'BusinessController@index' )->name( 'business.index' );
 Route::get( '/business/subscriptions', 'BusinessController@subscriptions' )->name( 'business.subscriptions' );
+
+// Videos
+Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload' );
+Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
+Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
+Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
