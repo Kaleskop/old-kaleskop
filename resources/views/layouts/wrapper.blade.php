@@ -1,12 +1,12 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
-<div>
+<div class="sm:flex">
  <div>
   @include( 'layouts.sidebar' )
  </div>
 
- <div>
+ <div class="sm:flex-1 sm:order-first">
   @include( $page )
  </div>
 </div>
