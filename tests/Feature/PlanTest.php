@@ -21,6 +21,7 @@ class PlanTest extends TestCase {
   $response = $this->post( route( 'plans.store' ), $plan->toArray() );
 
   $this->assertDatabaseHas( 'plans', [ 'name'=>$plan->name ] );
+  $response->assertRedirect( route( 'plans.index' ) );
  }
 
  public function test_AuthUser_CanEditAPlan_HasPlan() {
@@ -33,6 +34,7 @@ class PlanTest extends TestCase {
   $response = $this->patch( route( 'plans.update', $plan ), $data );
 
   $this->assertDatabaseHas( 'plans', [ 'name'=>$data['name'] ] );
+  $response->assertRedirect( route( 'plans.index' ) );
  }
 
  public function test_AuthUser_CanDeleteSubscriptionPlan_MissingPlan() {
