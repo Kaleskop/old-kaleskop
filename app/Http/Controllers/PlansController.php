@@ -47,4 +47,23 @@ class PlansController extends Controller {
 
   return back();
  }
+
+
+ // - view actions
+
+ public function index() {
+  $plans = Plan::latest()->get();
+
+  return view( 'layouts.wrapper', [ 'page'=>'plans.index-page' ] )
+   ->with( 'plans', $plans );
+ }
+
+ public function create() {
+  return view( 'layouts.wrapper', [ 'page'=>'plans.create-page' ] );
+ }
+
+ public function edit( Plan $plan ) {
+  return view( 'layouts.wrapper', [ 'page'=>'plans.edit-page' ] )
+   ->with( 'plan', $plan );
+ }
 }
