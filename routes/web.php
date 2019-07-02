@@ -30,3 +30,8 @@ Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
 Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
+
+// Subscriptions
+Route::post( '/subscriptions/subscribe', 'SubscriptionsController@subscribe' )->name( 'subscriptions.subscribe' );
+Route::patch( '/subscriptions/{plan}/swap', 'SubscriptionsController@swap' )->name( 'subscriptions.swap' );
+Route::delete( '/subscriptions/{plan}/cancel', 'SubscriptionsController@cancel' )->name( 'subscriptions.cancel' );
