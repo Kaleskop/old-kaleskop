@@ -35,3 +35,4 @@ Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create'
 Route::post( '/plans', 'PlansController@store' )->name( 'plans.store' );
 Route::patch( '/plans/{plan}', 'PlansController@update' )->name( 'plans.update' );
 Route::delete( '/plans/{plan}', 'PlansController@destroy' )->name( 'plans.destroy' );
+Route::get( '/plans', 'PlansController@index' )->name( 'plans.index' );
