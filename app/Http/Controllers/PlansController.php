@@ -21,7 +21,7 @@ class PlansController extends Controller {
 
   $plan = Plan::create( $request->all() );
 
-  return back();
+  return redirect()->route( 'plans.index' );
  }
 
  public function update( Request $request, Plan $plan ) {
@@ -39,7 +39,7 @@ class PlansController extends Controller {
 
   $plan->update( $request->all() );
 
-  return back();
+  return redirect()->route( 'plans.index' );
  }
 
  public function destroy( Plan $plan ) {
