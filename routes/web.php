@@ -30,3 +30,8 @@ Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
 Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
+
+// Plans
+Route::post( '/plans', 'PlansController@store' )->name( 'plans.store' );
+Route::patch( '/plans/{plan}', 'PlansController@update' )->name( 'plans.update' );
+Route::delete( '/plans/{plan}', 'PlansController@destroy' )->name( 'plans.destroy' );
