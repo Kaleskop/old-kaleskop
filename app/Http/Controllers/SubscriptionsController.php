@@ -8,6 +8,11 @@ use App\Plan;
 
 class SubscriptionsController extends Controller {
 
+ public function __construct() {
+  $this->middleware( 'auth' );
+  $this->middleware( 'business' );
+ }
+
  public function subscribe( Request $request ) {
   $this->validate( $request, [
    'plan'        => [ 'required' ],
