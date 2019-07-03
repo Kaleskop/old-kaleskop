@@ -35,3 +35,4 @@ Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create'
 Route::post( '/subscriptions/subscribe', 'SubscriptionsController@subscribe' )->name( 'subscriptions.subscribe' );
 Route::patch( '/subscriptions/{plan}/swap', 'SubscriptionsController@swap' )->name( 'subscriptions.swap' );
 Route::delete( '/subscriptions/{plan}/cancel', 'SubscriptionsController@cancel' )->name( 'subscriptions.cancel' );
+Route::get( '/subscriptions', 'SubscriptionsController@index' )->name( 'subscriptions.index' );
