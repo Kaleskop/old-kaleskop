@@ -23,6 +23,10 @@
   <span></span>
   <span>{{ __( 'Videos' ) }}</span>
  </a>
+ <a href="{{ route( 'advs.index' ) }}">
+  <span></span>
+  <span>{{ __( 'Advertisements' ) }}</span>
+ </a>
  @endbusiness
 
 </nav>
