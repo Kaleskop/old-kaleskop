@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Plan;
+use Auth;
 
 class SubscriptionsController extends Controller {
 
@@ -50,5 +51,15 @@ class SubscriptionsController extends Controller {
   $request->user()->business->subscription( $plan->product_name )->cancel();
 
   return back();
+ }
+
+
+ // - view actions
+
+ public function index() {
+  $business = Auth::user()->business;
+
+  return view( 'layouts.wrapper', [ 'page'=>'subscriptions.index-page' ] )
+   ->with( 'business', $business );
  }
 }
