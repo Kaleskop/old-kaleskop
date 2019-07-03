@@ -23,7 +23,7 @@ class AdvsController extends Controller {
   $business = $request->user()->business;
   $adv = $business->advs()->create( $request->all() );
 
-  return back();
+  return redirect()->route( 'advs.index' );
  }
 
  public function destroy( Adv $adv ) {
