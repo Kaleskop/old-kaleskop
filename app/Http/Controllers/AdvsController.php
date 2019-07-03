@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Adv;
+use Auth;
 
 class AdvsController extends Controller {
 
@@ -30,5 +31,22 @@ class AdvsController extends Controller {
   $adv->delete();
 
   return back();
+ }
+
+
+ // - view actions
+
+ public function index() {
+  $advs = Auth::user()->business->advs;
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.index-page' ] )
+   ->with( 'advs', $advs );
+ }
+
+ public function create() {
+  $videos = Auth::user()->business->videos;
+
+  return view( 'layouts.wrapper', [ 'page'=>'advs.create-page' ] )
+   ->with( 'videos', $videos );
  }
 }
