@@ -6,8 +6,40 @@ use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
+use App\Adv;
+use App\User;
+use App\Business;
+use Storage;
+use App\Video;
+
 class AdvTest extends TestCase {
 
  use RefreshDatabase;
 
+ public function test_BusinessUser_CanInsertAnAdvertisement_HasAdv() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
+  $video = factory( Video::class )->create( [ 'business_id'=>$business->id ] );
+
+  $adv = factory( Adv::class )->make( [ 'video_id'=>$video->id ] );
+  $response = $this->post( route( 'advs.store' ), $adv->toArray() );
+
+  $this->assertDatabaseHas( 'advs', [ 'title'=>$adv->title ] );
+ }
+
+ public function test_BusinessUser_CanDeleteAnAdvertisement_IsSoftDeleted() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
+  $adv = factory( Adv::class )->create( [ 'business_id'=>$business->id ] );
+
+  $response = $this->delete( route( 'advs.destroy', $adv ) );
+
+  $this->assertSoftDeleted( 'advs', [ 'id'=>$adv->id ] );
+ }
 }
