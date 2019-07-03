@@ -9,6 +9,10 @@ use App\Plan;
 
 class PlansController extends Controller {
 
+ public function __construct() {
+  $this->middleware( 'auth' );
+ }
+
  public function store( Request $request ) {
   $this->validate( $request, [
    'name'         => [ 'required', 'string', 'max:255', 'unique:plans' ],
