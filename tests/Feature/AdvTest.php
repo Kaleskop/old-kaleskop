@@ -28,6 +28,7 @@ class AdvTest extends TestCase {
   $response = $this->post( route( 'advs.store' ), $adv->toArray() );
 
   $this->assertDatabaseHas( 'advs', [ 'title'=>$adv->title ] );
+  $response->assertRedirect( route( 'advs.index' ) );
  }
 
  public function test_BusinessUser_CanDeleteAnAdvertisement_IsSoftDeleted() {
