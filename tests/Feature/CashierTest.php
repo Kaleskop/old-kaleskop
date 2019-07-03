@@ -40,6 +40,7 @@ class CashierTest extends TestCase {
   $response = $this->post( route( 'subscriptions.subscribe' ), $this->planData );
 
   $this->assertDatabaseHas( 'subscriptions', [ 'business_id'=>$business->id ] );
+  $response->assertRedirect( route( 'subscriptions.index' ) );
  }
 
  public function test_SubscribedUser_CanSwapToPlan_HasSubscription() {
