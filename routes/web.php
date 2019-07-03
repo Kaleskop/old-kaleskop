@@ -34,3 +34,4 @@ Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create'
 // Advs
 Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
+Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
