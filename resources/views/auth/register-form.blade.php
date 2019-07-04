@@ -42,7 +42,7 @@
 
   <div>
    <input type="checkbox" name="terms" id="terms" value="true" />
-   <label for="terms">{{ __( 'I agree with the' ) }} <a href="" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
+   <label for="terms">{{ __( 'I agree with the' ) }} <a href="{{ route( 'terms.account' ) }}" target="_blank">{{ __( 'Terms of service' ) }}</a></label>
 
    @if ( $errors->has( 'terms' ) )
     <p>{{ $errors->first( 'terms' ) }}</p>
