@@ -16,6 +16,10 @@ Auth::routes();
 // Website
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
 
+// Channels
+Route::get( '/channels', 'WebsiteController@channels' )->name( 'website.channels' );
+Route::get( '/channels/{adv}', 'WebsiteController@advs' )->name( 'website.advs' );
+
 // Account
 Route::get( '/account', 'AccountController@index' )->name( 'account.index' );
 Route::get( '/account/business', 'AccountController@business' )->name( 'account.business' );
