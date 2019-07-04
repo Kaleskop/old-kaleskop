@@ -1,3 +1,3 @@
 <article>
- <h4>{{ $adv->title }}</h4>
+ <h4><a href="{{ route( 'website.advs', $adv ) }}">{{ $adv->title }}</a></h4>
 </article>
