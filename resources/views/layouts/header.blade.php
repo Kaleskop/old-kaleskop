@@ -7,4 +7,9 @@
    <span>{{ __( 'Login' ) }}</span>
   </a>
  @endguest
+
+ <a href="{{ route( 'website.channels' ) }}">
+  <span></span>
+  <span>{{ __( 'Channels' ) }}</span>
+ </a>
 </header>
