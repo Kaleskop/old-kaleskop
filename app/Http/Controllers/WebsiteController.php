@@ -8,6 +8,11 @@ use App\Adv;
 
 class WebsiteController extends Controller {
 
+ public function endpoint( Adv $adv ) {
+
+  return redirect( $adv->endpoint );
+ }
+
 
  // - view actions
 
