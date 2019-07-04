@@ -6,7 +6,7 @@
   <h2>{{ __( 'Upload a new video' ) }}</h2>
  </header>
 
- @include( 'videos.create-form' )
+ <video-uploader></video-uploader>
 
 </section>
 
