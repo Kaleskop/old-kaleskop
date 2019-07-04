@@ -1,5 +1,10 @@
 <nav>
 
+<a href="{{ route( 'website.channels' ) }}">
+  <span></span>
+  <span>{{ __( 'Channels' ) }}</span>
+ </a>
+
  @guest
  <a href="{{ route( 'login' ) }}">
   <span></span>
