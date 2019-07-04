@@ -17,6 +17,51 @@ export default {
   "adv": {
    "type": Object,
    "required": true
+  },
+  "playsinline": {
+   "type": Boolean,
+   "default": false
+  },
+  "start": {
+   "type": Number,
+   "default": 0
+  },
+  "options": {
+   "type": Object,
+   "default": () => ({})
+  },
+  "customEvent": {
+   "type": String,
+   "default": 'statechaged'
+  },
+  "events": {
+   "type": Array,
+   "default": () => []
+  },
+  "globals": {
+   "type": Object,
+   "default": () => (
+    {
+     "errorDisplay": false,
+     "autoplay": false,
+     "controls": true,
+     "preload": 'auto',
+     "fluid": false,
+     "muted": false,
+     "techOrder": ['html5'],
+     "controlBar": {
+      "remainingTimeDisplay": false,
+      "playToggle": {},
+      "progressControl": {},
+      "fullscreenToggle": {},
+      "volumeMenuButton": {
+       "inline": false,
+       "vertical": true
+      }
+     },
+     "plugins": {}
+    }
+   )
   }
  },
 
