@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "vue-template-compiler": "^2.6.10",
-        "tailwindcss": "next"
+        "tailwindcss": "next",
+        "video.js": "^7.5.0"
     }
 }
