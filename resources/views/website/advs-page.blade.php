@@ -3,6 +3,8 @@
 @section( 'page' )
 <section>
  <div>
+  <video-player v-bind:adv="{{ $adv }}"></video-player>
+
   <header>
    <h2>{{ $adv->title }}</h2>
 
