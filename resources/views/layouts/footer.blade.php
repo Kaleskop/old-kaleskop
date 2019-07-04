@@ -21,7 +21,7 @@
 
   <div>
    <p>{{ __( 'Company' ) }}</p>
-   <p><a href="">{{ __( 'Terms of Service' ) }}</a></p>
+   <p><a href="{{ route( 'terms.general' ) }}">{{ __( 'Terms of Service' ) }}</a></p>
    <p><a href="">{{ __( 'Privacy' ) }}</a></p>
    <p><a href="mailto:info@kaleskop.com">{{ __( 'Contact' ) }}</a></p>
   </div>
