@@ -29,7 +29,7 @@ class SubscriptionsController extends Controller {
   }
   $subscription = $subscription->create( $request->stripeToken );
 
-  return back();
+  return redirect()->route( 'subscriptions.index' );
  }
 
  public function swap( Request $request, Plan $plan ) {
