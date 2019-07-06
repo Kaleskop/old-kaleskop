@@ -41,6 +41,7 @@ class CreateBusinessesTable extends Migration {
    $table->integer( 'quantity' );
    $table->timestamp( 'trial_ends_at' )->nullable();
    $table->timestamp( 'ends_at' )->nullable();
+   $table->timestamp( 'terms_at' )->nullable();
    $table->timestamps();
   } );
  }
