@@ -19,7 +19,7 @@ class BusinessTest extends TestCase {
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
 
   $response = $this->post( route( 'business.store' ), $business->toArray() );
 
@@ -32,7 +32,7 @@ class BusinessTest extends TestCase {
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
   $this->post( route( 'business.store' ), $business->toArray() );
 
   $response = $this->get( route( 'account.business' ) );
@@ -45,7 +45,7 @@ class BusinessTest extends TestCase {
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
   $this->post( route( 'business.store' ), $business->toArray() );
 
   $model = Business::where( 'vat', $business->vat )->first();
