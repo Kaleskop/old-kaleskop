@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 use Storage;
+use Carbon\Carbon;
 
 class Business extends Model {
 
@@ -22,7 +23,7 @@ class Business extends Model {
   * @var array
   */
  protected $fillable = [
-  'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap', 'folder'
+  'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap', 'folder', 'terms_at'
  ];
 
 
@@ -34,6 +35,7 @@ class Business extends Model {
 
   static::creating( function( $model ) {
    $model->folder = (string) Str::orderedUuid();
+   $model->terms_at = Carbon::now();
   } );
 
   static::created( function( $model ) {
