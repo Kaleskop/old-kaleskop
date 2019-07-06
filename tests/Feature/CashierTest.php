@@ -15,14 +15,14 @@ class CashierTest extends TestCase {
 
  use RefreshDatabase;
 
- protected $planData = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+ protected $planData = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
 
  public function test_AuthUser_BusinessRegistrationCreateStripeCustomer_NotNullStripeId() {
   Storage::fake( 's3' );
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
-  $business = factory( Business::class )->make();
+  $business = factory( Business::class )->make( [ 'terms'=>'true' ] );
   $this->post( route( 'business.store' ), $business->toArray() );
 
   $business = Business::where( 'vat', $business->vat )->first();
