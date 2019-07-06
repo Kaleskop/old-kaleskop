@@ -18,7 +18,8 @@ class SubscriptionsController extends Controller {
   $this->validate( $request, [
    'plan'        => [ 'required' ],
    'stripeToken' => [ 'required' ],
-   'coupon'      => [ 'nullable', 'string', 'max:255' ]
+   'coupon'      => [ 'nullable', 'string', 'max:255' ],
+   'terms'       => [ 'accepted' ],
   ] );
 
   $business = $request->user()->business;
