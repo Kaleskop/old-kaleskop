@@ -23,6 +23,7 @@ class BusinessController extends Controller {
    'address_line1' => [ 'required', 'string', 'max:255' ],
    'city'          => [ 'required', 'string', 'max:255' ],
    'cap'           => [ 'required', 'string', 'max:11' ],
+   'terms'         => [ 'accepted' ],
   ] );
 
   $business = $request->user()->business()->create( $request->all() );

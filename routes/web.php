@@ -57,3 +57,9 @@ Route::post( '/subscriptions/subscribe', 'SubscriptionsController@subscribe' )->
 Route::patch( '/subscriptions/{plan}/swap', 'SubscriptionsController@swap' )->name( 'subscriptions.swap' );
 Route::delete( '/subscriptions/{plan}/cancel', 'SubscriptionsController@cancel' )->name( 'subscriptions.cancel' );
 Route::get( '/subscriptions', 'SubscriptionsController@index' )->name( 'subscriptions.index' );
+
+// Terms
+Route::get( '/terms/general', 'TermsController@general' )->name( 'terms.general' );
+Route::get( '/terms/account', 'TermsController@account' )->name( 'terms.account' );
+Route::get( '/terms/business', 'TermsController@business' )->name( 'terms.business' );
+Route::get( '/terms/kas', 'TermsController@kas' )->name( 'terms.kas' );

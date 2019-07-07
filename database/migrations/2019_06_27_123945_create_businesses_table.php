@@ -23,6 +23,7 @@ class CreateBusinessesTable extends Migration {
    $table->string( 'city' );
    $table->string( 'cap' );
    $table->string( 'folder' )->nullable();
+   $table->timestamp( 'terms_at' )->nullable();
 
    $table->string( 'stripe_id' )->nullable()->collation( 'utf8mb4_bin' );
    $table->string( 'card_brand' )->nullable();
@@ -41,7 +42,6 @@ class CreateBusinessesTable extends Migration {
    $table->integer( 'quantity' );
    $table->timestamp( 'trial_ends_at' )->nullable();
    $table->timestamp( 'ends_at' )->nullable();
-   $table->timestamp( 'terms_at' )->nullable();
    $table->timestamps();
   } );
  }
