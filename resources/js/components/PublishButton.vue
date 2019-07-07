@@ -1,6 +1,11 @@
 <template>
 
-<div></div>
+<div>
+ <button v-on:click.prevent="toggle">
+  <span v-if="isPublished">Unpublish</span>
+  <span v-else>Publish</span>
+ </button>
+</div>
 
 </template>
 
