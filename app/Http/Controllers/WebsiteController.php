@@ -9,6 +9,7 @@ use App\Adv;
 class WebsiteController extends Controller {
 
  public function endpoint( Adv $adv ) {
+  $adv = $adv->incrementClicks();
 
   return redirect( $adv->endpoint );
  }
