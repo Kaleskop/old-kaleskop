@@ -33,4 +33,13 @@ class Video extends Model {
  public function business() {
   return $this->belongsTo( Business::class, 'business_id' );
  }
+
+ /**
+  * A video may have many advs
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+ public function advs() {
+  return $this->hasMany( Adv::class, 'video_id' );
+ }
 }

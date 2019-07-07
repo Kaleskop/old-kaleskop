@@ -35,3 +35,11 @@ Route::post( '/videos/upload', 'VideosController@upload' )->name( 'videos.upload
 Route::delete( '/videos/{video}', 'VideosController@destroy' )->name( 'videos.destroy' );
 Route::get( '/videos', 'VideosController@index' )->name( 'videos.index' );
 Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create' );
+
+// Advs
+Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
+Route::post( '/advs/{adv}/publish', 'AdvsController@publish' )->name( 'advs.publish' );
+Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
+Route::delete( '/advs/{adv}/publish', 'AdvsController@unpublish' )->name( 'advs.unpublish' );
+Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
+Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
