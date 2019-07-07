@@ -27,6 +27,13 @@ class Adv extends Model {
  protected $fillable = [ 'video_id', 'title', 'endpoint', 'clicks', 'published_at' ];
 
  /**
+  * The attributes that should be cast to native types.
+  *
+  * @var array
+  */
+ protected $casts = [ 'published_at' => 'datetime' ];
+
+ /**
   * The relationships that should always be loaded.
   *
   * @var array
