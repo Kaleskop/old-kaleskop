@@ -33,6 +33,26 @@ class AdvsController extends Controller {
   return back();
  }
 
+ public function publish( Request $request, Adv $adv ) {
+  $adv = $adv->publish();
+
+  if ( $request->wantsJson() ) {
+   return $adv;
+  }
+
+  return back();
+ }
+
+ public function unpublish( Request $request, Adv $adv ) {
+  $adv = $adv->unpublish();
+
+  if ( $request->wantsJson() ) {
+   return $adv;
+  }
+
+  return back();
+ }
+
 
  // - view actions
 
