@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
 use Storage;
+use Laravel\Cashier\Billable;
 
 class Business extends Model {
+
+ use Billable;
 
  /**
   * The table associated with the model
@@ -37,9 +40,19 @@ class Business extends Model {
   } );
 
   static::created( function( $model ) {
+   // - create the stripe customer before any possible error
+   $model->createStripeCustomer();
+
    // - create folder on storage
    Storage::disk( 's3' )->makeDirectory( $model->folder );
   } );
+ }
+
+ /**
+  * Specify the tax percentage business pays on a subscription
+  */
+ public function taxPercentage() {
+  return 22;
  }
 
 
@@ -86,5 +99,31 @@ class Business extends Model {
    return true;
   }
   return false;
+ }
+
+
+ // - helpers
+
+ /**
+  * Create the stripe customer for this model
+  */
+ public function createStripeCustomer() {
+  $customer = [
+   'email'=>$this->email,
+   'shipping'=>[
+    'address'=>[
+     'country'=>$this->country,
+     'line1'=>$this->address_line1,
+     'city'=>$this->city,
+     'postal_code'=>$this->cap
+    ],
+    'name'=>$this->name
+   ],
+   'tax_info'=>[
+    'tax_id'=>$this->vat,
+    'type'=>'vat'
+   ]
+  ];
+  $this->createAsStripeCustomer( $customer );
  }
 }

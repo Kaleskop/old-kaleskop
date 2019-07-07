@@ -51,3 +51,9 @@ Route::delete( '/plans/{plan}', 'PlansController@destroy' )->name( 'plans.destro
 Route::get( '/plans', 'PlansController@index' )->name( 'plans.index' );
 Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
 Route::get( '/plans/{plan}/edit', 'PlansController@edit' )->name( 'plans.edit' );
+
+// Subscriptions
+Route::post( '/subscriptions/subscribe', 'SubscriptionsController@subscribe' )->name( 'subscriptions.subscribe' );
+Route::patch( '/subscriptions/{plan}/swap', 'SubscriptionsController@swap' )->name( 'subscriptions.swap' );
+Route::delete( '/subscriptions/{plan}/cancel', 'SubscriptionsController@cancel' )->name( 'subscriptions.cancel' );
+Route::get( '/subscriptions', 'SubscriptionsController@index' )->name( 'subscriptions.index' );
