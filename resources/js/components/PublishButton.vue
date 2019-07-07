@@ -22,6 +22,22 @@ export default {
   return {
    "isPublished": this.published
   }
+ },
+
+ "methods": {
+  toggle() {
+   this.isPublished ? this.unpublish() : this.publish();
+  },
+  publish() {
+   axios.post(this.endpoint)
+    .then(response => this.isPublished = true)
+    .catch(response => console.log('Publish err', response.data))
+  },
+  unpublish() {
+   axios.post(this.endpoint, { "_method": "delete" } )
+    .then(response => this.isPublished = false)
+    .catch(response => console.log('Unpublish err', response.data))
+  }
  }
 }
 </script>
