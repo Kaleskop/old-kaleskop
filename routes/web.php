@@ -43,3 +43,11 @@ Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' )
 Route::delete( '/advs/{adv}/publish', 'AdvsController@unpublish' )->name( 'advs.unpublish' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );
 Route::get( '/advs/create', 'AdvsController@create' )->name( 'advs.create' );
+
+// Plans
+Route::post( '/plans', 'PlansController@store' )->name( 'plans.store' );
+Route::patch( '/plans/{plan}', 'PlansController@update' )->name( 'plans.update' );
+Route::delete( '/plans/{plan}', 'PlansController@destroy' )->name( 'plans.destroy' );
+Route::get( '/plans', 'PlansController@index' )->name( 'plans.index' );
+Route::get( '/plans/create', 'PlansController@create' )->name( 'plans.create' );
+Route::get( '/plans/{plan}/edit', 'PlansController@edit' )->name( 'plans.edit' );
