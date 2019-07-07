@@ -43,4 +43,31 @@ class AdvTest extends TestCase {
 
   $this->assertSoftDeleted( 'advs', [ 'id'=>$adv->id ] );
  }
+
+ public function test_Adv_CanBePublished_NotNullPublished() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
+  $adv = factory( Adv::class )->create();
+
+  $response = $this->post( route( 'advs.publish', $adv ) );
+
+  $this->assertNotNull( Adv::first()->published_at );
+ }
+
+ public function test_Adv_CanBeUnPublished_NullPublished() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
+  $adv = factory( Adv::class )->create();
+  $this->post( route( 'advs.publish', $adv ) );
+
+  $response = $this->delete( route( 'advs.unpublish', $adv ) );
+
+  $this->assertNull( Adv::first()->published_at );
+ }
 }
