@@ -1,12 +1,12 @@
 <form method="POST" action="{{ route( 'plans.store' ) }}">
  @csrf
 
- <fieldset class="mb-8 p-4 border border-transparent">
+ <fieldset class="mb-8 p-4 border border-black">
   <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div class="mb-4">
    <label for="name" class="block mb-2 font-bold">{{ __( 'Name' ) }}</label>
-   <input type="text" name="name" id="name" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" value="{{ old( 'name' ) }}" required autofocus />
+   <input type="text" name="name" id="name" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'name' ) }}" required autofocus />
 
    @if ( $errors->has( 'name' ) )
     <p>{{ $errors->first( 'name' ) }}</p>
@@ -34,12 +34,12 @@
   </div>
  </fieldset>
 
- <fieldset class="mb-8 p-4 border border-transparent">
+ <fieldset class="mb-8 p-4 border border-black">
   <legend class="p-2 font-light italic">{{ __( 'Plan details' ) }}</legend>
 
   <div class="mb-4">
    <label for="product_id" class="block mb-2 font-bold">{{ __( 'Product id' ) }}</label>
-   <input type="text" name="product_id" id="product_id" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" value="{{ old( 'product_id' ) }}" required />
+   <input type="text" name="product_id" id="product_id" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'product_id' ) }}" required />
 
    @if ( $errors->has( 'product_id' ) )
     <p>{{ $errors->first( 'product_id' ) }}</p>
@@ -48,7 +48,7 @@
 
   <div class="mb-4">
    <label for="product_name" class="block mb-2 font-bold">{{ __( 'Product name' ) }}</label>
-   <input type="text" name="product_name" id="product_name" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" value="{{ old( 'product_name' ) }}" required />
+   <input type="text" name="product_name" id="product_name" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'product_name' ) }}" required />
 
    @if ( $errors->has( 'product_name' ) )
     <p>{{ $errors->first( 'product_name' ) }}</p>
@@ -57,7 +57,7 @@
 
   <div>
    <label for="plan_id" class="block mb-2 font-bold">{{ __( 'Plan id' ) }}</label>
-   <input type="text" name="plan_id" id="plan_id" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" value="{{ old( 'plan_id' ) }}" required />
+   <input type="text" name="plan_id" id="plan_id" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'plan_id' ) }}" required />
 
    @if ( $errors->has( 'plan_id' ) )
     <p>{{ $errors->first( 'plan_id' ) }}</p>
@@ -65,5 +65,5 @@
   </div>
  </fieldset>
 
- <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center">{{ __( 'Create' ) }}</button>
+ <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center bg-black text-white">{{ __( 'Create' ) }}</button>
 </form>
