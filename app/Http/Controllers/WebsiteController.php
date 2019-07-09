@@ -32,4 +32,8 @@ class WebsiteController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'website.advs-page' ] )
    ->with( 'adv', $adv );
  }
+
+ public function pricing() {
+  return view( 'website.pricing' );
+ }
 }
