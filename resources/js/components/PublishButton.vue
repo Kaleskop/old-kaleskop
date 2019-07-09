@@ -1,7 +1,7 @@
 <template>
 
 <div>
- <button v-on:click.prevent="toggle">
+ <button v-on:click.prevent="toggle" v-bind:class="[ isPublished ? 'published' : '' ]">
   <span v-if="isPublished">Unpublish</span>
   <span v-else>Publish</span>
  </button>
