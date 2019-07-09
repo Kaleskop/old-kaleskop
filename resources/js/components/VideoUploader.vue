@@ -1,6 +1,6 @@
 <template>
 
-<div class="inline-block rounded border-2 border-transparent shadow-md">
+<div class="inline-block rounded border-2 border-black shadow-md">
  <div>
   <div class="relative pt-8 pb-4 px-4">
    <form>
@@ -20,7 +20,7 @@
       <p class="font-medium text-2xl">Mission complete!</p>
      </div>
      <div v-else>
-      <div class="relative p-2 border border-transparent">
+      <div class="relative p-2 border border-black">
        <div class="mb-4 text-center">
         <button type="button" v-on:click.prevent="remove(file)">Remove</button>
        </div>
@@ -37,7 +37,7 @@
    </div>
   </div>
 
-  <div class="relative py-6 px-4 border-t border-transparent text-center">
+  <div class="relative py-6 px-4 border-t border-black text-center">
    <button type="button" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center" v-if="!$refs.upload || !$refs.upload.active" @click="$refs.upload.active = true">Upload</button>
    <button type="button" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center" v-else @click="$refs.upload.active = false">Stop</button>
   </div>
