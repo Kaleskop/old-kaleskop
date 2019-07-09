@@ -11,7 +11,7 @@
      v-bind:size="size"
      v-on:input-file="inputFile"
      add-index
-    >Add file</file-upload>
+    >Select Video</file-upload>
    </form>
 
    <div>
