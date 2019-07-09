@@ -15,7 +15,7 @@
  <div>
   <div>
    <p>{{ __( 'Resources' ) }}</p>
-   <p><a href="">{{ __( 'Pricing' ) }}</a></p>
+   <p><a href="{{ route( 'website.pricing' ) }}">{{ __( 'Pricing' ) }}</a></p>
    <p><a href="https://discord.gg/rcMk7M5" target="_blank">Discord</a></p>
   </div>
 
