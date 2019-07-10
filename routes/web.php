@@ -13,6 +13,9 @@
 
 Auth::routes( [ 'verify'=>true ] );
 
+// stripe
+Route::post( '/stripe/webhook', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook' );
+
 // Website
 Route::get( '/', 'WebsiteController@homepage' )->name( 'website.homepage' );
 Route::get( '/k/{adv}', 'WebsiteController@endpoint' )->name( 'website.endpoint' );
