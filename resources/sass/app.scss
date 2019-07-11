@@ -14,9 +14,14 @@
 }
 
 // publish button
-.publish-button {}
+.publish-button {
+ @apply bg-red-600;
+}
+.publish-button.published {
+ @apply bg-green-600 !important;
+}
 .publish-button > span {
- @apply absolute p-1 rounded text-sm text-center opacity-0;
+ @apply absolute p-1 rounded text-sm text-center opacity-0 bg-black text-white;
  left: 1em;
  top: -10px;
  transition: opacity .3s ease-in;
