@@ -2,11 +2,11 @@
 
 @section( 'page' )
 <section>
- <header>
-  <h2>{{ __( 'Channels' ) }}</h2>
+ <header class="mb-6">
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'Channels' ) }}</h2>
  </header>
 
- <div>
+ <div class="px-6 flex flex-col">
   @forelse( $advs as $adv )
    @include( 'website.tile' )
 

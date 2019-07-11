@@ -5,8 +5,8 @@
  <div>
   <video-player v-bind:adv="{{ $adv }}"></video-player>
 
-  <header>
-   <h2>{{ $adv->title }}</h2>
+  <header class="p-2 flex justify-between items-center">
+   <h2 class="font-medium text-2xl">{{ $adv->title }}</h2>
 
    <a href="{{ route( 'website.endpoint', $adv ) }}" target="_blank">
     <span></span>
@@ -15,7 +15,7 @@
   </header>
  </div>
 
- <section>
+ <section class="py-16 px-6 flex justify-center items-center">
   <p>{{ __( 'Comments disabled for this content' ) }}</p>
  </section>
 </section>
