@@ -5,7 +5,7 @@
  <div>
   <video-player v-bind:adv="{{ $adv }}"></video-player>
 
-  <header class="p-2 flex justify-between items-center">
+  <header class="p-2 flex justify-between items-center bg-black text-white">
    <h2 class="font-medium text-2xl">{{ $adv->title }}</h2>
 
    <a href="{{ route( 'website.endpoint', $adv ) }}" target="_blank">
