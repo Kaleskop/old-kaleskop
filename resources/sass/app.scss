@@ -29,3 +29,36 @@
 .publish-button:hover > span {
  @apply opacity-100;
 }
+
+// plan tile
+.plan input[type=checkbox],
+.plan input[type=radio] {
+ border:0;
+ clip:rect(0 0 0 0);
+ height:1px;
+ margin:-1px;
+ overflow:hidden;
+ padding:0;
+ position:absolute;
+ width:1px;
+}
+.plan input[type=checkbox]:checked ~ label:after,
+.plan input[type=radio]:checked ~ label:after {
+ opacity:1;
+}
+.plan label:after {
+ content:"checked";
+ display:inline-block;
+ font-size:1.5rem;
+ font-style:normal;
+ font-variant:normal;
+ font-weight:900;
+ line-height:1;
+ opacity:0;
+ position:absolute;
+ right:.5rem;
+ text-rendering:auto;
+ top:.5rem;
+ transition:opacity .2s;
+ -webkit-font-smoothing:antialiased;
+}
