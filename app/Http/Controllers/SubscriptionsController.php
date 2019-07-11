@@ -19,7 +19,6 @@ class SubscriptionsController extends Controller {
    'plan'        => [ 'required' ],
    'stripeToken' => [ 'required' ],
    'coupon'      => [ 'nullable', 'string', 'max:255' ],
-   'terms'       => [ 'accepted' ],
   ] );
 
   $business = $request->user()->business;
