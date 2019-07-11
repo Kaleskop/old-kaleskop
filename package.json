@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "vue-template-compiler": "^2.6.10",
-        "tailwindcss": "next"
+        "tailwindcss": "next",
+        "vue-upload-component": "^2.8.20"
     }
 }
