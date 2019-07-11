@@ -1,12 +1,12 @@
 <form method="POST" action="{{ route( 'login' ) }}">
  @csrf
 
- <fieldset class="mb-8 p-4 border border-transparent">
+ <fieldset class="mb-8 p-4 border border-black">
   <legend class="p-2 font-light italic">{{ __( 'Login' ) }}</legend>
 
   <div class="mb-4">
    <label for="email" class="block mb-2 font-bold">{{ __( 'Email address' ) }}</label>
-   <input type="email" name="email" id="email" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" required />
+   <input type="email" name="email" id="email" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" required />
 
    @if ( $errors->has( 'email' ) )
     <p>{{ $errors->first( 'email' ) }}</p>
@@ -15,7 +15,7 @@
 
   <div class="mb-4">
    <label for="password" class="block mb-2 font-bold">{{ __( 'Password' ) }}</label>
-   <input type="password" name="password" id="password" class="appearance-none w-full py-2 px-4 rounded border-2 border-transparent leading-tight" required />
+   <input type="password" name="password" id="password" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" required />
 
    @if ( $errors->has( 'password' ) )
     <p>{{ $errors->first( 'password' ) }}</p>
@@ -34,5 +34,5 @@
   </div>
  </fieldset>
 
- <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center">{{ __( 'Login' ) }}</button>
+ <button type="submit" class="select-none cursor-pointer inline-block white-space-no-wrap py-2 px-4 rounded border border-transparent leading-tight text-center bg-black text-white">{{ __( 'Login' ) }}</button>
 </form>
