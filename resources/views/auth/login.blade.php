@@ -1,17 +1,17 @@
 @extends(  'layouts.layout' )
 
 @section( 'body' )
-<section>
- <header>
-  <h2>{{ __( 'Sign in' ) }}</h2>
-  <p>{{ config( 'app.name' ) }}</p>
+<section class="sm:w-2/3 md:w-1/2 sm:mx-auto py-16 px-6">
+ <header class="mb-6">
+  <h2 class="mb-2 font-medium text-3xl">{{ __( 'Sign in' ) }}</h2>
+  <p class="font-semibold text-2xl">{{ config( 'app.name' ) }}</p>
  </header>
 
- <p>{{ __( "Don't have a account?" ) }} <a href="{{ route( 'register' ) }}">{{ __( 'Create One' ) }}</a></p>
+ <p class="mb-4">{{ __( "Don't have a account?" ) }} <a href="{{ route( 'register' ) }}" class="underline">{{ __( 'Create One' ) }}</a></p>
 
  @include( 'auth.login-form' )
 
- <p><a href="{{ route( 'password.request' ) }}">{{ __( 'Forgot Password?' ) }}</a></p>
+ <p class="mt-4"><a href="{{ route( 'password.request' ) }}" class="underline">{{ __( 'Forgot Password?' ) }}</a></p>
 </section>
 
 @endsection
