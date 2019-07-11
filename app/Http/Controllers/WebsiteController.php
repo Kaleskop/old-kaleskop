@@ -22,7 +22,7 @@ class WebsiteController extends Controller {
  }
 
  public function channels() {
-  $advs = Adv::inRandomOrder()->get();
+  $advs = Adv::inRandomOrder()->published()->get();
 
   return view( 'layouts.wrapper', [ 'page'=>'website.channels-page' ] )
    ->with( 'advs', $advs );
