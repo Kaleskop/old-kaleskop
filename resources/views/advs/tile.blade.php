@@ -1,4 +1,4 @@
-<article class="mb-4 p-2 border-2 border-transparent">
+<article class="mb-4 p-2 border-2 border-black">
  <header class="mb-4 flex items-center">
   <h3 class="mr-4 font-medium text-2xl">{{ $adv->title }}</h3>
 
