@@ -6,3 +6,15 @@
 @tailwind components;
 
 @tailwind utilities;
+
+// publish button
+.publish-button {}
+.publish-button > span {
+ @apply absolute p-1 rounded text-sm text-center opacity-0;
+ left: 1em;
+ top: -10px;
+ transition: opacity .3s ease-in;
+}
+.publish-button:hover > span {
+ @apply opacity-100;
+}
