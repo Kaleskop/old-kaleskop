@@ -7,6 +7,10 @@
  </header>
 
  <div>
+  <div>
+   @include( 'account.business-help' )
+  </div>
+
   <div class="md:w-2/3">
    @include( 'account.business-form' )
   </div>
