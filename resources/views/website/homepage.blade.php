@@ -23,8 +23,8 @@
 
 <div>
  <div class="container mx-auto py-16 px-6">
-  <div>
-   <p>{{ __( 'Kaleskop is the advertisement videos archives' ) }}</p>
+  <div class="py-8">
+   <p class="font-medium text-2xl text-center">{{ __( 'Kaleskop is the advertisement videos archives' ) }}</p>
   </div>
 
   <p class="mb-4 font-medium uppercase text-3xl text-center">{{ __( 'Spot your business' ) }}</p>
