@@ -6,7 +6,7 @@
   <h2 class="mb-2 font-medium text-3xl">{{ __( 'New advertisement' ) }}</h2>
  </header>
 
- <p>{{ __( 'Advertising is the main content of Kaleskop.' ) }}</p>
+ <p class="mb-4">{{ __( 'Advertising is the main content of Kaleskop.' ) }}</p>
 
  @if ( $videos->isNotEmpty() )
   @include( 'advs.create-form' )
