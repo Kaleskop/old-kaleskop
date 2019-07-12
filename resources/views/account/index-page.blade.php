@@ -8,6 +8,8 @@
 
  @include( 'account.verified-email-message' )
 
+ @include( 'account.advertising-message' )
+
  @include( 'auth.logout-form' )
 
 </section>
