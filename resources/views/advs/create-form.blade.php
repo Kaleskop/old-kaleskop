@@ -16,6 +16,8 @@
    @if ( $errors->has( 'video_id' ) )
     <p>{{ $errors->first( 'video_id' ) }}</p>
    @endif
+
+   <p><small>{{ __( 'Select the video to associate with your advertising.' ) }}</small></p>
   </div>
 
   <div class="mb-4">
@@ -25,6 +27,8 @@
    @if ( $errors->has( 'title' ) )
     <p>{{ $errors->first( 'title' ) }}</p>
    @endif
+
+   <p><small>{{ __( 'Describe your advertisement briefly.' ) }}</small></p>
   </div>
 
   <div>
@@ -34,6 +38,9 @@
    @if ( $errors->has( 'endpoint' ) )
     <p>{{ $errors->first( 'endpoint' ) }}</p>
    @endif
+
+   <p><small>{{ __( 'Choose carefully the landing page to send your audience to.' ) }}</small> {{ __( "From here on, it's up to you!" ) }}</p>
+   <p><em>{{ __( 'Make the difference and turn your audience into customers.' ) }}</em></p>
   </div>
  </fieldset>
 
