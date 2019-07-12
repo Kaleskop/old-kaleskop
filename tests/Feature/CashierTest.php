@@ -15,7 +15,7 @@ class CashierTest extends TestCase {
 
  use RefreshDatabase;
 
- protected $planData = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa', 'terms'=>'true' ];
+ protected $planData = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
 
  public function test_AuthUser_BusinessRegistrationCreateStripeCustomer_NotNullStripeId() {
   Storage::fake( 's3' );
