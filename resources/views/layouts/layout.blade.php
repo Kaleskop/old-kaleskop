@@ -23,6 +23,7 @@
   <div id="kaleskop">
    @yield( 'body' )
 
+   <cookie-strip></cookie-strip>
   </div>
  </body>
 </html>
