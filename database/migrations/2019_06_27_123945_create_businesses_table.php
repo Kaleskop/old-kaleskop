@@ -22,6 +22,7 @@ class CreateBusinessesTable extends Migration {
    $table->string( 'address_line1' );
    $table->string( 'city' );
    $table->string( 'cap' );
+   $table->string( 'sdi', 7 )->nullable();
    $table->string( 'folder' )->nullable();
    $table->timestamp( 'terms_at' )->nullable();
 
