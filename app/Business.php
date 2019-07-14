@@ -26,7 +26,7 @@ class Business extends Model {
   * @var array
   */
  protected $fillable = [
-  'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap', 'folder', 'terms_at'
+  'country', 'name', 'email', 'vat', 'address_line1', 'city', 'cap', 'sdi', 'folder', 'terms_at'
  ];
 
 
@@ -124,6 +124,9 @@ class Business extends Model {
    'tax_info'=>[
     'tax_id'=>$this->vat,
     'type'=>'vat'
+   ],
+   'metadata'=>[
+    'sdi'=>$this->sdi ?? '-'
    ]
   ];
   $this->createAsStripeCustomer( $customer );
