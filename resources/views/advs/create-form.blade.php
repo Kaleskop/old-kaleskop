@@ -6,7 +6,7 @@
 
   <div class="mb-4">
    <label for="video_id" class="block mb-2 font-bold">{{ __( 'Video' ) }}</label>
-   <select name="video_id" id="video_id" class="appearance-none outline-none cursor-pointer block w-full py-2 px-4 rounded border-2 border-transparent leading-tight bg-black text-white" required>
+   <select name="video_id" id="video_id" class="appearance-none outline-none cursor-pointer block w-full mb-2 py-2 px-4 rounded border-2 border-transparent leading-tight bg-black text-white" required>
     @foreach( $videos as $video )
      <option value="{{ $video->id }}">{{ $video->name }}</option>
 
@@ -22,7 +22,7 @@
 
   <div class="mb-4">
    <label for="title" class="block mb-2 font-bold">{{ __( 'Title' ) }}</label>
-   <input type="text" name="title" id="title" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'title' ) }}" required />
+   <input type="text" name="title" id="title" class="appearance-none w-full mb-2 py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'title' ) }}" required />
 
    @if ( $errors->has( 'title' ) )
     <p>{{ $errors->first( 'title' ) }}</p>
@@ -33,13 +33,13 @@
 
   <div>
    <label for="endpoint" class="block mb-2 font-bold">{{ __( 'Endpoint' ) }}</label>
-   <input type="text" name="endpoint" id="endpoint" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'endpoint' ) }}" required />
+   <input type="text" name="endpoint" id="endpoint" class="appearance-none w-full mb-2 py-2 px-4 rounded border-2 border-black leading-tight" value="{{ old( 'endpoint' ) }}" required />
 
    @if ( $errors->has( 'endpoint' ) )
     <p>{{ $errors->first( 'endpoint' ) }}</p>
    @endif
 
-   <p><small>{{ __( 'Choose carefully the landing page to send your audience to.' ) }}</small> {{ __( "From here on, it's up to you!" ) }}</p>
+   <p class="mb-2"><small>{{ __( 'Choose carefully the landing page to send your audience to.' ) }}</small> {{ __( "From here on, it's up to you!" ) }}</p>
    <p><em>{{ __( 'Make the difference and turn your audience into customers.' ) }}</em></p>
   </div>
  </fieldset>

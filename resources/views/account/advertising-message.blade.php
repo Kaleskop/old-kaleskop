@@ -1,5 +1,5 @@
 @if ( !Auth::user()->hasBusiness() )
-<div>
- <p>{{ __( 'Start advertising your business.' ) }} <a href="{{ route( 'business.store' ) }}">{{ __( 'Get your first GB of free space.' ) }}</a></p>
+<div class="my-4 p-2 border-2 border-black font-light">
+ <p>{{ __( 'Start advertising your business.' ) }} <a href="{{ route( 'business.store' ) }}" class="underline">{{ __( 'Get your first GB of free space.' ) }}</a></p>
 </div>
 @endif
