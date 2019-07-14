@@ -23,6 +23,10 @@
 
 <div>
  <div class="container mx-auto py-16 px-6">
+  <div>
+   <p>{{ __( 'Kaleskop is the advertisement videos archives' ) }}</p>
+  </div>
+
   <p class="mb-4 font-medium uppercase text-3xl text-center">{{ __( 'Spot your business' ) }}</p>
 
   <div class="py-8">
@@ -36,7 +40,7 @@
 
   <div class="py-8">
    <p class="mb-2 font-semibold text-2xl">{{ __( 'Get your 1st GB for free.' ) }}</p>
-   <p class="text-xl">{{ __( 'We host a collection of advertisement videos of your business. Up to 30 minutes of free advertising time for your business with an unlimited number of advertisements for you.' ) }}</p>
+   <p class="text-xl">{{ __( 'We host a collection of advertisement videos of your business. Up to 17 minutes of free advertising time for your business with an unlimited number of advertisements for you.' ) }}</p>
   </div>
  </div>
 </div>
