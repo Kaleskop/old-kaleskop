@@ -36,12 +36,21 @@
    @endif
   </div>
 
-  <div>
+  <div class="mb-4">
    <label for="vat" class="block mb-2 font-bold">{{ __( 'Vat number' ) }}</label>
    <input type="text" name="vat" id="vat" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" placeholder="IT123456789" value="{{ old( 'vat' ) }}" required />
 
    @if ( $errors->has( 'vat' ) )
     <p>{{ $errors->first( 'vat' ) }}</p>
+   @endif
+  </div>
+
+  <div>
+   <label for="sdi" class="block mb-2 font-bold">{{ __( 'SDI account ID' ) }}</label>
+   <input type="text" name="sdi" maxlength="7" id="sdi" class="appearance-none w-full py-2 px-4 rounded border-2 border-black leading-tight" placeholder="0000000" value="{{ old( 'sdi' ) }}" />
+
+   @if ( $errors->has( 'sdi' ) )
+    <p>{{ $errors->first( 'sdi' ) }}</p>
    @endif
   </div>
  </fieldset>

@@ -14,6 +14,9 @@
   <dd class="mb-4 text-sm">{{ __( 'Enter a valid email address that can receive all company and system communications.' ) }}</dd>
 
   <dt class="mb-2 font-medium">{{ __( 'VAT Number' ) }}</dt>
-  <dd class="text-sm">{{ __( 'Make sure the first two digits of your VAT number match the country of origin you select.' ) }}</dd>
+  <dd class="mb-4 text-sm">{{ __( 'Make sure the first two digits of your VAT number match the country of origin you select.' ) }}</dd>
+
+  <dt class="mb-2 font-medium">{{ __( 'SDI account ID' ) }}</dt>
+  <dd class="text-sm">{{ __( 'Optional - Used for customers who wish to receive invoices via the Web service (API) or FTP' ) }}</dd>
  </dl>
 </div>
