@@ -25,6 +25,7 @@ window.events = new Vue();
 Vue.component('video-uploader', require('./components/VideoUploader.vue').default);
 Vue.component('publish-button', require('./components/PublishButton.vue').default);
 Vue.component('video-player', require('./components/VideoPlayer.vue').default);
+Vue.component('cookie-strip', require('./components/CookieStrip.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
