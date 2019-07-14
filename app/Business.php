@@ -124,6 +124,9 @@ class Business extends Model {
    'tax_info'=>[
     'tax_id'=>$this->vat,
     'type'=>'vat'
+   ],
+   'metadata'=>[
+    'sdi'=>$this->sdi ?? '-'
    ]
   ];
   $this->createAsStripeCustomer( $customer );
