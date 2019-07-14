@@ -53,4 +53,16 @@ class BusinessTest extends TestCase {
   $this->assertDatabaseHas( 'businesses', [ 'id'=>$model->id, 'folder'=>$model->folder ] );
   Storage::disk( 's3' )->assertExists( $model->folder );
  }
+
+ public function test_Business_CanRegisterABusinessWithSDI_DatabaseHasBusiness() {
+  Storage::fake( 's3' );
+
+  $user = factory( User::class )->create();
+  $this->actingAs( $user );
+  $business = factory( Business::class )->make( [ 'sdi'=>'0000000', 'terms'=>'true' ] );
+
+  $response = $this->post( route( 'business.store' ), $business->toArray() );
+
+  $this->assertDatabaseHas( 'businesses', [ 'vat'=>$business->vat, 'sdi'=>$business->sdi ] );
+ }
 }
