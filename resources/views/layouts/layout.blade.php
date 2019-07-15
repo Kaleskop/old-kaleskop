@@ -17,6 +17,12 @@
   <script src="{{ asset( 'js/app.js' ) }}" defer></script>
   @stack( 'scripts' )
 
+  <!-- analytics layer -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119492692-1"></script>
+ <script>
+  window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-119492692-1');
+ </script>
+
   <title>{{ config( 'app.name' ) }}{{ isset( $title ) ? " | {$title}" : '' }}</title>
  </head>
  <body class="leading-normal font-normal text-left text-base">
