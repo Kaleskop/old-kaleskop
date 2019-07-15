@@ -12,6 +12,7 @@ class VideosController extends Controller {
 
  public function __construct() {
   $this->middleware( 'auth' );
+  $this->middleware( 'verified' );
   $this->middleware( 'business' );
   $this->middleware( 'uploadLimit' )->only( [ 'create', 'upload' ] );
  }
