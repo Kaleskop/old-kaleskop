@@ -55,3 +55,8 @@
  @include( 'layouts.footer' )
 
 @endsection
+
+@push( 'metadata' )
+ @include( 'layouts.metadata' )
+
+@endpush
