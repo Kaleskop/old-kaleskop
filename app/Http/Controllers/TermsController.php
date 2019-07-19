@@ -13,15 +13,18 @@ class TermsController extends Controller {
  // - view actions
 
  public function general() {
-  return view( 'layouts.wrapper', [ 'page'=>'terms.general' ] );
+  return view( 'layouts.wrapper', [ 'page'=>'terms.general' ] )
+   ->with( 'title', __( "Terms of Service" ) );
  }
 
  public function account() {
-  return view( 'layouts.wrapper', [ 'page'=>'terms.account' ] );
+  return view( 'layouts.wrapper', [ 'page'=>'terms.account' ] )
+   ->with( 'title', __( "Account Terms of Service" ) );
  }
 
  public function business() {
-  return view( 'layouts.wrapper', [ 'page'=>'terms.business' ] );
+  return view( 'layouts.wrapper', [ 'page'=>'terms.business' ] )
+   ->with( 'title', __( "Business Terms of Service" ) );
  }
 
  public function kas() {
