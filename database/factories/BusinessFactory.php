@@ -15,7 +15,7 @@ $factory->define( Business::class, function( Faker $faker ) {
   'country'       => $faker->country,
   'name'          => $faker->catchPhrase,
   'email'         => $faker->unique()->companyEmail,
-  'vat'           => $faker->unique()->randomNumber,
+  'vat'           => $faker->unique()->ean8,
   'address_line1' => $faker->address,
   'city'          => $faker->city,
   'cap'           => $faker->postcode,
