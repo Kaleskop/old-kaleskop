@@ -9,6 +9,45 @@ use Auth;
 trait Moderate {
 
  /**
+  * Strict moderation status
+  */
+ protected static $strictModeration = false;
+
+ /**
+  * Default moderation status when in strict mode
+  */
+ protected static $defaultModeration = ModStatus::PENDING;
+
+ /**
+  * Set strict moderation status
+  */
+ public static function strictModeration( $flag = true ) {
+  static::$strictModeration = (bool) $flag;
+ }
+
+ /**
+  * Set default moderation to use when in strict mode
+  */
+ public static function defaultModeration( $status ) {
+  static::$defaultModeration = $status;
+ }
+
+
+ /**
+  * Boot the moderation trait for a model.
+  *
+  * @return void
+  */
+ public static function bootModerate() {
+  if ( static::$strictModeration ) {
+   static::created( function( $model ) {
+    $model->moderate( static::$defaultModeration );
+   } );
+  }
+ }
+
+
+ /**
   * Add a new moderation for the model
   */
  public function moderate( $status ) {
