@@ -5,6 +5,7 @@ namespace App\Traits;
 use App\Moderation;
 use App\Enums\ModStatus;
 use Auth;
+use App\Scopes\ModerationScope;
 
 trait Moderate {
 
@@ -39,6 +40,8 @@ trait Moderate {
   * @return void
   */
  public static function bootModerate() {
+  static::addGlobalScope( new ModerationScope );
+
   if ( static::$strictModeration ) {
    static::created( function( $model ) {
     $model->moderate( static::$defaultModeration );
