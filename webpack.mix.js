@@ -12,6 +12,8 @@ const tailwindcss = require('tailwindcss');
  |
  */
 
+mix.copyDirectory('resources/images', 'public/images');
+
 mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/core/kaleshop.js', 'public/js');
 mix.sass('resources/sass/app.scss', 'public/css')
