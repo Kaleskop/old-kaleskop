@@ -79,8 +79,8 @@ return [
  | or a specific page page.
  |
  */
-	'logo' => asset( 'images/branding/open_graph/kaleskop-logo-1200x1200.png'),
-	'mark' => asset( 'images/branding/open_graph/kaleskop-mark-1200x620.png'),
+	'logo' => 'images/branding/open_graph/kaleskop-logo-1200x1200.png',
+	'mark' => 'images/branding/open_graph/kaleskop-mark-1200x620.png',
 
 	/*
  |--------------------------------------------------------------------------
