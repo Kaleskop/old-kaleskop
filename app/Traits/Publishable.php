@@ -3,7 +3,6 @@
 namespace App\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
-use Carbon\Carbon;
 
 trait Publishable {
 
@@ -12,7 +11,7 @@ trait Publishable {
   */
  public function publish() {
   $this->update( [
-   'published_at' => Carbon::now()
+   'published_at' => $this->freshTimestamp()
   ] );
 
   return $this;
@@ -36,14 +35,14 @@ trait Publishable {
   * Get only published models
   */
  public function scopePublished( Builder $query ) {
-  return $query->whereNotNull( 'published_at' )->where( 'published_at', '<=', Carbon::now() );
+  return $query->whereNotNull( 'published_at' )->where( 'published_at', '<=', $this->freshTimestamp() );
  }
 
  /**
   * Get only unpublished models
   */
  public function scopeUnpublished( Builder $query ) {
-  return $query->whereNull( 'published_at' )->orWhere( 'published_at', '>', Carbon::now() );
+  return $query->whereNull( 'published_at' )->orWhere( 'published_at', '>', $this->freshTimestamp() );
  }
 
 
@@ -55,6 +54,6 @@ trait Publishable {
  public function isPublished() {
   if ( is_null( $this->published_at ) ) { return false; }
 
-  return $this->published_at->lte( Carbon::now() );
+  return $this->published_at->lte( $this->freshTimestamp() );
  }
 }
