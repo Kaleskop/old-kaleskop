@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use Bouncer;
+use Silber\Bouncer\BouncerFacade as Bouncer;
 use App\Business;
 use App\Video;
 use App\Adv;
