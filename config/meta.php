@@ -67,7 +67,7 @@ return [
  | help search engines understand it better. 
  |
  */
-	'description' => 'Kaleskop is the first advertisement videos archive.',
+	'description' => 'The Kaleskop advertisement video archive.',
 
 	/*
  |--------------------------------------------------------------------------
