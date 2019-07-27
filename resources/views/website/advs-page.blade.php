@@ -21,3 +21,8 @@
 </section>
 
 @endsection
+
+@push( 'metadata' )
+ @include( 'layouts.metadata', [ 'title'=>$adv->title ] )
+
+@endpush
