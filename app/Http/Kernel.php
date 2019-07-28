@@ -64,6 +64,7 @@ class Kernel extends HttpKernel
         'business' => \App\Http\Middleware\BusinessMiddleware::class,
         'withBusiness' => \App\Http\Middleware\WithBusinessMiddleware::class,
         'uploadLimit' => \App\Http\Middleware\UploadLimitMiddleware::class,
+        'checkRole' => \App\Http\Middleware\CheckRoleMiddleware::class,
     ];
 
     /**
