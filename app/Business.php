@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -11,7 +12,7 @@ use Carbon\Carbon;
 
 class Business extends Model {
 
- use Billable;
+ use Notifiable, Billable;
 
  /**
   * The table associated with the model
