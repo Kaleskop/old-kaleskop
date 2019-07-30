@@ -26,6 +26,7 @@ Vue.component('video-uploader', require('./components/VideoUploader.vue').defaul
 Vue.component('publish-button', require('./components/PublishButton.vue').default);
 Vue.component('adv-player', require('./components/AdvPlayer.vue').default);
 Vue.component('cookie-strip', require('./components/CookieStrip.vue').default);
+Vue.component('video-player', require('./components/VideoPlayer.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
