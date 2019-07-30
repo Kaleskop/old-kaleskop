@@ -3,7 +3,7 @@
 @section( 'page' )
 <section>
  <div>
-  <video-player v-bind:adv="{{ $adv }}"></video-player>
+  <adv-player v-bind:adv="{{ $adv }}"></adv-player>
 
   <header class="p-2 flex justify-between items-center bg-black text-white">
    <h2 class="font-medium text-2xl">{{ $adv->title }}</h2>
