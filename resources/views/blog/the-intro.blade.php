@@ -59,7 +59,8 @@
 
  <video-player v-bind:video="{{ $intro }}"></video-player>
 
- <p class="my-6">Bravo, if you have come to read up to this point I suggest you to follow me on <a href="https://twitter.com/kaleskopadv" target="_blank" class="underline">Twitter</a> or better on <a href="https://discord.gg/rcMk7M5" target="_blank" class="underline">Discord</a> so we can discuss the project together. You can contribute to the development of the platform on <a href="https://github.com/Kaleskop" target="_blank" class="underline">Github</a>.</p>
+ <p class="mt-6 mb-2">Bravo, if you have come to read up to this point I suggest you to follow me on <a href="https://twitter.com/kaleskopadv" target="_blank" class="underline">Twitter</a> or better on <a href="https://discord.gg/rcMk7M5" target="_blank" class="underline">Discord</a> so we can discuss the project together.</p>
+ <p>You can contribute to the development of the platform on <a href="https://github.com/Kaleskop" target="_blank" class="underline">Github</a>.</p>
 
  @include( 'blog.andrea-signature' )
 
