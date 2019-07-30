@@ -11,7 +11,7 @@ import _vjs from "video.js";
 const videojs = window.videojs || _vjs;
 
 export default {
- "name": "video-player",
+ "name": "adv-player",
 
  "props": {
   "adv": {
