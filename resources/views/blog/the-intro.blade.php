@@ -68,6 +68,9 @@
 @endsection
 
 @push( 'metadata' )
- @include( 'layouts.metadata' )
+ @include( 'layouts.metadata', [
+  'title' => "Kaleskop | A brief introduction",
+  'description' => "I'll tell you where I'm at and where I want to go."
+ ] )
 
 @endpush
