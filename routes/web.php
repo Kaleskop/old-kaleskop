@@ -66,3 +66,7 @@ Route::get( '/subscriptions', 'SubscriptionsController@index' )->name( 'subscrip
 Route::get( '/terms/general', 'TermsController@general' )->name( 'terms.general' );
 Route::get( '/terms/account', 'TermsController@account' )->name( 'terms.account' );
 Route::get( '/terms/business', 'TermsController@business' )->name( 'terms.business' );
+
+// Blog
+Route::get( '/blog/the-intro', 'BlogController@theintro' )->name( 'blog.theintro' );
+
