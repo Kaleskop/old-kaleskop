@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder {
   $this->call( AdvSeeder::class );
   $this->call( PlanSeeder::class );
   $this->call( BouncerRolesSeeder::class );
+  $this->call( BouncerUsersSeeder::class );
  }
 }
