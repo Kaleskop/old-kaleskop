@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 use App\Video;
 use Storage;
 use Auth;
+use App\User;
+use App\Notifications\VideoUploaded;
 
 class VideosController extends Controller {
 
@@ -36,6 +39,10 @@ class VideosController extends Controller {
    'size'    => $video->getSize()
   ];
   $video = $business->videos()->create( $model );
+
+  // - notifications
+  $admins = User::whereIs( 'admin', 'moderator' )->get();
+  Notification::send( $admins, new VideoUploaded( $video, $business ) );
 
   return redirect()->route( 'videos.index' );
  }
