@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 
 use App\Plan;
 use Auth;
+use App\User;
+use App\Notifications\BusinessSubscription;
 
 class SubscriptionsController extends Controller {
 
@@ -29,6 +32,10 @@ class SubscriptionsController extends Controller {
    $subscription->withCoupon( $request->coupon );
   }
   $subscription = $subscription->create( $request->stripeToken );
+
+  // - notifications
+  $admins = User::whereIs( 'admin' )->get();
+  Notification::send( $admins, new BusinessSubscription( $business ) );
 
   return redirect()->route( 'subscriptions.index' );
  }
