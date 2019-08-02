@@ -29,7 +29,11 @@ class BusinessController extends Controller {
    'terms'         => [ 'accepted' ],
   ] );
 
-  $business = $request->user()->business()->create( $request->all() );
+  $user = $request->user();
+  $business = $user->business()->create( $request->all() );
+
+  // assign business role
+  $user->assign( 'business' );
 
   return redirect()->route( 'business.index' );
  }

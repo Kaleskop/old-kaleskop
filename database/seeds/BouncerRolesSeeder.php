@@ -9,7 +9,7 @@ use App\Adv;
 use App\Plan;
 use App\Moderation;
 
-class BouncerSeeder extends Seeder {
+class BouncerRolesSeeder extends Seeder {
 
  /**
   * Run the database seeds.
