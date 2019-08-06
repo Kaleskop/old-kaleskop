@@ -12,6 +12,8 @@
 
  @include( 'auth.logout-form' )
 
+ @include( 'notifications.notification-section', [ 'subject'=>$user ] )
+
 </section>
 
 @endsection
