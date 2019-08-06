@@ -70,3 +70,5 @@ Route::get( '/terms/business', 'TermsController@business' )->name( 'terms.busine
 // Blog
 Route::get( '/blog/the-intro', 'BlogController@theintro' )->name( 'blog.theintro' );
 
+// Notifications
+Route::post( '/notifications/{notification}/read', 'NotificationsController@read' )->name( 'notifications.read' );
