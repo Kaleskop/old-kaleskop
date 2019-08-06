@@ -6,6 +6,8 @@
   <h2 class="mb-2 font-medium text-3xl">{{ $business->name }}</h2>
  </header>
 
+ @include( 'notifications.notification-section', [ 'subject'=>$business ] )
+
 </section>
 
 @endsection
