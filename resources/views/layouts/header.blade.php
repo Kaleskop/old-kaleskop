@@ -1,5 +1,5 @@
 <header class="py-2 px-6 flex justify-between items-center">
- <h1 class="font-semibold text-2xl"><a href="{{ route( 'website.homepage' ) }}">{{ config( 'app.name' ) }}</a></h1>
+ <h1 class="font-brand font-semibold text-2xl"><a href="{{ route( 'website.homepage' ) }}">{{ config( 'app.name' ) }}</a></h1>
 
  @guest
   <a href="{{ route( 'login' ) }}" class="sm:hidden">
