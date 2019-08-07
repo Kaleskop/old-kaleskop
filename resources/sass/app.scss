@@ -86,3 +86,8 @@
 
 // video player
 @import "videojs";
+
+// articles
+.article {
+ @apply font-serif font-normal;
+}
