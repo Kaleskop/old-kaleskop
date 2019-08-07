@@ -35,6 +35,8 @@
   <p>We made a simple, direct and clean introduction to Kaleskop.</p>
  </blockquote>
 
+ @include( 'blog.andrea-signature' )
+
  <p class="mb-2">If you'd like to stay updated on upcoming events.</p>
 
  @include( 'newsletters.newsletter-section' )
