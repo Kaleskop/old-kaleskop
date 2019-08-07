@@ -1,4 +1,25 @@
 
+
+// fonts
+@font-face {
+ font-family: 'Tiempos';
+ font-style: normal;
+ font-weight: 400;
+ src: url(../resources/fonts/TiemposTextWeb-Regular.woff2) format('woff2');
+}
+@font-face {
+ font-family: 'Tiempos';
+ font-style: italic;
+ font-weight: 400;
+ src: url(../resources/fonts/TiemposTextWeb-RegularItalic.woff2) format('woff2');
+}
+@font-face {
+ font-family: 'Tiempos';
+ font-style: normal;
+ font-weight: bold;
+ src: url(../resources/fonts/TiemposTextWeb-Bold.woff2) format('woff2');
+}
+
 // - tailwind
 
 @tailwind base;
