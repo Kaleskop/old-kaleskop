@@ -4,7 +4,7 @@
 <header>
  <div class="container mx-auto px-6">
   <nav class="py-2 flex justify-between items-center">
-   <h1 class="font-semibold text-2xl"><a href="{{ route( 'website.homepage' ) }}">{{ config( 'app.name' ) }}</a></h1>
+   <h1 class="font-brand font-semibold text-2xl"><a href="{{ route( 'website.homepage' ) }}">{{ config( 'app.name' ) }}</a></h1>
 
    <div>
     <a href="{{ route( 'account.index' ) }}">
