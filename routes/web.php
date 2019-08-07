@@ -72,3 +72,6 @@ Route::get( '/blog/the-intro', 'BlogController@theintro' )->name( 'blog.theintro
 
 // Notifications
 Route::post( '/notifications/{notification}/read', 'NotificationsController@read' )->name( 'notifications.read' );
+
+// Newsletter
+Route::post( '/newsletters/subscribe', 'NewslettersController@subscribe' )->name( 'newsletters.subscribe' );
