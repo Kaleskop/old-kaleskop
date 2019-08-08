@@ -22,4 +22,8 @@ class BlogController extends Controller {
   return view( 'layouts.wrapper', [ 'page'=>'blog.the-intro' ] )
    ->with( 'intro', $intro );
  }
+
+ public function collection() {
+  return view( 'layouts.wrapper', [ 'page'=>'blog.collection' ] );
+ }
 }
