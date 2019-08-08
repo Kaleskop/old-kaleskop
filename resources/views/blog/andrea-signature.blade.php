@@ -3,7 +3,7 @@
   <img src="{{ asset( 'resources/images/layout/users/andrea.jpg' ) }}" class="w-40 mr-4 rounded-full border-8 border-white" />
   <div>
    <p class="font-semibold text-xl">Andrea Giuseppe</p>
-   <p class="text-xl font-medium">Creator of Kaleskop</p>
+   <p class="text-xl font-medium">{{ __( 'Creator of ' ) }} <span class="font-brand">{{ config( 'app.name' ) }}</span>/p>
   </div>
  </a>
 </div>
