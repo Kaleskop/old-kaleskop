@@ -3,7 +3,7 @@
  <div class="container mx-auto px-6">
   <div class="mb-4">
    <p>{{ __( 'Ready to Get Started?' ) }}</p>
-   <p class="font-semibold text-2xl">{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</p>
+   <p class="font-brand font-semibold text-2xl">{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</p>
   </div>
   <div>
    <p><a href="{{ route( 'register' ) }}">{{ __( 'Sign up For Free' ) }}</a></p>
@@ -29,7 +29,7 @@
 
  <div class="container mx-auto px-6">
   <div>
-   <p class="mb-2 text-sm">&copy; 2019 - <a href="{{ route( 'website.homepage' ) }}" class="underline">{{ config( 'app.name' ) }}</a></p>
+   <p class="mb-2 text-sm">&copy; 2019 - <a href="{{ route( 'website.homepage' ) }}" class="font-brand underline">{{ config( 'app.name' ) }}</a></p>
    <p><small>{{ __( 'Built by' ) }} <a href="https://andreagiuseppe.com" target="_blank" class="underline">AndreaGiuseppe</a>.</small></p>
   </div>
   

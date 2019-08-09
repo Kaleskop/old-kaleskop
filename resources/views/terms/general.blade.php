@@ -4,9 +4,9 @@
 <article class="py-16 px-6">
  <h2 class="mb-2 font-medium text-3xl">General Terms of Service</h2>
 
- <p class="mb-4 font-semibold text-xl">Welcome to Kaleskop!</p>
+ <p class="mb-4 font-semibold text-xl">Welcome to <span class="font-brand">Kaleskop</span>!</p>
 
- <p class="mb-2">Kaleskop is a registered trademark owned by Worldtimeline di Pretto Andrea Giuseppe (&ldquo;<b>Worldtimeline</b>&ldquo;), an italian company operating under the laws of the European Economic Area, (Rea: VI-329139) located at st. A. Manzoni 6, 36073 Cornedo Vicentino, Italy.</p>
+ <p class="mb-2"><span class="font-brand">Kaleskop</span> is a registered trademark owned by Worldtimeline di Pretto Andrea Giuseppe (&ldquo;<b>Worldtimeline</b>&ldquo;), an italian company operating under the laws of the European Economic Area, (Rea: VI-329139) located at st. A. Manzoni 6, 36073 Cornedo Vicentino, Italy.</p>
  <p class="mb-4">These Terms of Service (&ldquo;<b>Terms</b>&ldquo;) apply to your access to and use of the Websites (&ldquo;<b>Websites</b>&ldquo;), Applications (&ldquo;<b>Applications</b>&ldquo;) and other Online Products (&ldquo;<b>Products</b>&ldquo;) and Services (&ldquo;<b>Services</b>&ldquo;) (collectively, our &ldquo;<b>Platform</b>&ldquo;) provided by <b>Worldtimeline</b>.</p>
 
  <p class="mb-4">Effective, July 1, 2019</p>

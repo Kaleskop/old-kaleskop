@@ -4,7 +4,7 @@
 <header>
  <div class="container mx-auto px-6">
   <nav class="py-2 flex justify-between items-center">
-   <h1 class="font-semibold text-2xl">{{ config( 'app.name' ) }}</h1>
+   <h1 class="font-brand font-semibold text-2xl">{{ config( 'app.name' ) }}</h1>
 
    <div>
     <a href="{{ route( 'account.index' ) }}">
@@ -24,7 +24,7 @@
 <div>
  <div class="container mx-auto py-16 px-6">
   <div class="py-8">
-   <p class="font-medium text-2xl text-center">{{ __( 'Kaleskop is the advertisement videos archives' ) }}</p>
+   <p class="font-medium text-2xl text-center"><span class="font-brand">{{ config( 'app.name' ) }}</span> {{ __( ' is the advertisement videos archives' ) }}</p>
   </div>
 
   <p class="mb-4 font-medium uppercase text-3xl text-center">{{ __( 'Spot your business' ) }}</p>
