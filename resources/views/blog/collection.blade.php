@@ -50,3 +50,12 @@
 </section>
 
 @endsection
+
+@push( 'metadata' )
+ @include( 'layouts.metadata', [
+  'twitter_card' => 'summary',
+  'title' => "Kaleskop | Resource Collection Widget",
+  'description' => "A brief tour on our resource collection widget"
+ ] )
+
+@endpush
