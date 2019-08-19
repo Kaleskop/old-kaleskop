@@ -9,7 +9,7 @@
  <video-player v-bind:video="{{ $intro }}"></video-player>
 
  <p class="mt-4 mb-4 font-bold text-xl">And Here She Is!</p>
- <p>That will be the introduction used at the beginning of every <span class="font-brand">Kaleskop</span> production. <em>Our firm, as simple as possible</em>.</p>
+ <p>That will be the introduction used at the beginning of every <span class="font-brand font-semibold">Kaleskop</span> production. <em>Our firm, as simple as possible</em>.</p>
 
  <hr class="my-12 border-t-2 border-black" />
 
@@ -32,7 +32,7 @@
  <p class="mb-6">It's easy to jot down something at random and hope that it works, while it's much more complicated to minimize <strong>to create a product that can last forever</strong>.</p>
 
  <blockquote class="my-8 py-2 pl-6 font-light text-xl border-l-4 border-black">
-  <p>We made a simple, direct and clean introduction to <span class="font-brand">Kaleskop</span>.</p>
+  <p>We made a simple, direct and clean introduction to <span class="font-brand font-semibold">Kaleskop</span>.</p>
  </blockquote>
 
  @include( 'blog.andrea-signature' )

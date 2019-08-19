@@ -7,7 +7,7 @@
  </header>
 
  <p class="mb-2">Today I want to focus on the main function every archive should have.</p>
- <p class="mb-6">Such an archive, shall be able to collect documents/resources to be catalogue. In <span class="font-brand">Kaleskop</span> resources we are trying to collect are the so called: "<strong>commercials</strong>".</p>
+ <p class="mb-6">Such an archive, shall be able to collect documents/resources to be catalogue. In <span class="font-brand font-semibold">Kaleskop</span> resources we are trying to collect are the so called: "<strong>commercials</strong>".</p>
 
  <p class="mb-6">The very important premise here, is to clarify the meaning of "commercials":</p>
 
@@ -31,7 +31,7 @@
   <p class="mb-4 font-medium text-2xl">Collection</p>
 
   <p class="mb-4 font-thin">I decided to use a very simple method to collect resources.</p>
-  <p class="mb-2">As you can see, on the left, there's an example of how <b>you can upload your "commercials"</b> inside the <span class="font-brand">Kaleskop</span> archive by <b>using our powerfull widget</b>.</p>
+  <p class="mb-2">As you can see, on the left, there's an example of how <b>you can upload your "commercials"</b> inside the <span class="font-brand font-semibold">Kaleskop</span> archive by <b>using our powerfull widget</b>.</p>
   <p class="mb-2">With few clicks you are able to upload your "commercials" into the in-cloud storage space dedicated to your company.</p>
   <p>All the features of conversion, adaptation and compression will be managed by the system in order to provide users with a top-level experience.</p>
  </div>
