@@ -8,6 +8,10 @@ module.exports = {
      "Tiempos",
      ...defaultTheme.fontFamily.serif
     ],
+    sans: [
+     "Work Sans",
+     ...defaultTheme.fontFamily.sans
+    ],
     brand: [
      "Alegreya Sans",
      ...defaultTheme.fontFamily.sans

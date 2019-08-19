@@ -29,7 +29,7 @@
 
  <div class="container mx-auto px-6">
   <div>
-   <p class="mb-2 text-sm">&copy; 2019 - <a href="{{ route( 'website.homepage' ) }}" class="font-brand underline">{{ config( 'app.name' ) }}</a></p>
+   <p class="mb-2 text-sm">&copy; 2019 - <a href="{{ route( 'website.homepage' ) }}" class="font-brand font-semibold underline">{{ config( 'app.name' ) }}</a></p>
    <p><small>{{ __( 'Built by' ) }} <a href="https://andreagiuseppe.com" target="_blank" class="underline">AndreaGiuseppe</a>.</small></p>
   </div>
   
