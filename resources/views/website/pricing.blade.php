@@ -25,7 +25,7 @@
  <div class="container mx-auto py-16 px-6">
   <p class="mb-4 font-medium uppercase text-xl text-center">{{ __( 'Pricing' ) }}</p>
   <p class="font-medium text-xl text-center">{{ __( 'Advertise with Kaleskop is fast and simple.' ) }}</p>
-  <p class="text-center">{{ __( 'Get your 1st GB of free space with almost 17 minutes* of video playback.' )}}</p>
+  <p class="text-center">{{ __( 'Get your 500Mb of free space with almost 10 minutes* of video playback.' )}}</p>
 
   <div class="mt-16 mb-8 flex flex-col flex-wrap md:flex-row">
    <div class="mb-6 p-4 w-full md:w-1/2 text-center">
@@ -36,10 +36,10 @@
 
     <div>
      <ul>
-      <li>{{ __( '1GB of free storage' ) }}</li>
+      <li>{{ __( '500Mb of free storage' ) }}</li>
       <li>{{ __( 'Unlimited amount of advertising' ) }}</li>
       <li>{{ __( 'Spot your business products' ) }}</li>
-      <li>{{ __( 'Up to 17 minutes* of video playback' ) }}</li>
+      <li>{{ __( 'Up to 10 minutes* of video playback' ) }}</li>
      </ul>
     </div>
    </div>
@@ -48,15 +48,15 @@
     <p class="font-semibold text-2xl">{{ __( 'Standard' ) }}</p>
     <p class="py-3 font-semibold text-4xl">10,98<sup>€</sup></p>
     <p class="font-bold">{{ __( 'Per month' ) }}</p>
-    <p>{{ __( '15GB Storage' ) }} - <small>{{ _( 'VAT included' ) }}</small></p>
+    <p>{{ __( '8GB Storage' ) }} - <small>{{ _( 'VAT included' ) }}</small></p>
 
     <div>
      <ul>
-      <li>{{ __( '1GB of free storage' ) }}</li>
+      <li>{{ __( '500Mb of free storage' ) }}</li>
       <li>{{ __( 'Unlimited amount of advertising' ) }}</li>
       <li>{{ __( 'Spot your business products' ) }}</li>
-      <li>{{ __( '15GB expanded storage' ) }}</li>
-      <li>{{ __( 'Up to 4 hours* of video playback' ) }}</li>
+      <li>{{ __( '8GB expanded storage' ) }}</li>
+      <li>{{ __( 'Up to 2 hours* of video playback' ) }}</li>
      </ul>
     </div>
    </div>
