@@ -44,17 +44,17 @@ class VideoTest extends TestCase {
   Storage::disk( 's3' )->assertMissing( $video->path );
  }
 
- public function test_BusinessUser_CanUploadOnlyUpTo1GB_RedirectToSubscription() {
+ public function test_BusinessUser_CanUploadOnlyUpTo500Mb_RedirectToSubscription() {
   Storage::fake( 's3' );
 
   $user = factory( User::class )->create();
   $this->actingAs( $user );
   $business = factory( Business::class )->create( [ 'user_id'=>$user->id ] );
-  $file1 = UploadedFile::fake()->create( 'fakevideo.mp4', 3000000 );
+  $file1 = UploadedFile::fake()->create( 'fakevideo.mp4', 1500000 );
   $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file1 ] );
-  $file2 = UploadedFile::fake()->create( 'fakevideo.mp4', 3200000 );
+  $file2 = UploadedFile::fake()->create( 'fakevideo.mp4', 1600000 );
   $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file2 ] );
-  $file3 = UploadedFile::fake()->create( 'fakevideo.mp4', 3000000 );
+  $file3 = UploadedFile::fake()->create( 'fakevideo.mp4', 1500000 );
   $this->post( route( 'videos.upload' ), [ 'uservideo'=>$file3 ] );
 
   $file = UploadedFile::fake()->create( 'fakevideo.mp4', 3000000 );
