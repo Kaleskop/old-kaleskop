@@ -39,7 +39,7 @@
  @include( 'blog.andrea-signature' )
 
  <p class="mb-2">I'm planning to post frequently on this blog with updates on my progress, deep dives into features, highlights, screenshots & videos.</p>
- <p>In the meantime you can familiarize yourself with the application by <a href="{{ route( 'register' ) }}" class="underline">registering your company</a> to take advantage of the 1GB of free storage.</p>
+ <p>In the meantime you can familiarize yourself with the application by <a href="{{ route( 'register' ) }}" class="underline">registering your company</a> to take advantage of the 500Mb of free storage.</p>
 
  <hr class="my-12 border-t-2 border-black" />
 

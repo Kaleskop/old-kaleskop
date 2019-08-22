@@ -39,8 +39,8 @@
   </div>
 
   <div class="py-8">
-   <p class="mb-2 font-semibold text-2xl">{{ __( 'Get your 1st GB for free.' ) }}</p>
-   <p class="text-xl">{{ __( 'We host a collection of advertisement videos of your business. Up to 17 minutes of free advertising time for your business with an unlimited number of advertisements for you.' ) }}</p>
+   <p class="mb-2 font-semibold text-2xl">{{ __( 'Get your 500Mb for free.' ) }}</p>
+   <p class="text-xl">{{ __( 'We host a collection of advertisement videos of your business. Up to 10 minutes of free advertising time for your business with an unlimited number of advertisements.' ) }}</p>
   </div>
  </div>
 </div>

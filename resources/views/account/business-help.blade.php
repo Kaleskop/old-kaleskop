@@ -1,7 +1,7 @@
 <div class="px-2 md:border-l md:border-black">
  <p class="mb-2 font-medium text-2xl">{{ __( 'Business registration' ) }}</p>
 
- <p class="mb-4">{{ __( 'By registering your business you will have access to your 1st GB of free storage space.' ) }}</p>
+ <p class="mb-4">{{ __( 'By registering your business you will have access to your 500Mb of free storage space.' ) }}</p>
 
  <p class="mb-2">{{ __( 'We are able to manage all companies belonging to the European Economic Area.' ) }}</p>
  <p class="mb-4">{{ __( 'Please, make sure you enter all the data correctly.' ) }}</p>
