@@ -95,7 +95,7 @@ class Business extends Model {
   * Checks if business is over the limit for uploaded files
   */
  public function isOverLimit() {
-  $limit = (1000*1024*1024) * 0.9;
+  $limit = (500*1024*1024) * 0.95;
   $amount = $this->videos()->sum( 'size' );
 
   if ( $amount > $limit ) {
