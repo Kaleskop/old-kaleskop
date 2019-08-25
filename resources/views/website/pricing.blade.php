@@ -44,7 +44,7 @@
     </div>
    </div>
 
-   <div class="mb-6 p-4 w-full md:w-1/2 text-center shadow-lg">
+   <div class="mb-6 p-4 w-full md:w-1/2 text-center rounded-lg shadow-lg">
     <p class="font-semibold text-2xl">{{ __( 'Standard' ) }}</p>
     <p class="py-3 font-semibold text-4xl">10,98<sup>€</sup></p>
     <p class="font-bold">{{ __( 'Per month' ) }}</p>
@@ -67,9 +67,9 @@
   </div>
  </div>
 
- <div>
+ <div class="bg-yellow-600">
   <div class="container mx-auto py-8 px-6">
-   <a href="{{ route( 'register' ) }}" class="cursor-pointer whitespace-nowrap block w-full md:w-1/2 md:mx-auto py-4 px-6 rounded tracking-wide font-medium text-center text-2xl shadow-md">{{ __( 'Get Started For Free' ) }}</a>
+   <a href="{{ route( 'register' ) }}" class="cursor-pointer whitespace-nowrap block w-full md:w-1/2 md:mx-auto py-4 px-6 rounded tracking-wide font-medium text-center text-2xl shadow-md bg-white">{{ __( 'Get Started For Free' ) }}</a>
   </div>
  </div>
 
