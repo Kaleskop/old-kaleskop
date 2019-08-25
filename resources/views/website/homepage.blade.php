@@ -41,7 +41,7 @@
 
      <div class="w-full md:w/1/3 text-center">
       <div class="w-32 mx-auto mb-4">
-       @include( 'svg.play' )
+       @include( 'svg.landing' )
       </div>
 
       <p class="mb-2 font-medium">{{ __( 'Reach persons interested in your brand' ) }}</p>
