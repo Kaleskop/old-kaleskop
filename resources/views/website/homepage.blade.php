@@ -20,8 +20,8 @@
    <div class="mb-4 text-center">
     <p class="font-semibold text-2xl">{{ __( 'Begin your funnel from valuable customers' ) }}</p>
 
-    <div class="mt-8 py-8 md:flex md:justify-center md:items-center">
-     <div class="w-full md:w/1/3 text-center">
+    <div class="mt-8 py-8 md:flex md:justify-center">
+     <div class="w-full md:w/1/3 mb-12 text-center">
       <div class="w-32 mx-auto mb-4">
        @include( 'svg.tv' )
       </div>
@@ -30,7 +30,7 @@
       <p>{{ __( 'Use your commercials as on TV but with an audience from all over the world in front of you')}}
      </div>
 
-     <div class="w-full md:w/1/3 text-center">
+     <div class="w-full md:w/1/3 mb-12 text-center">
       <div class="w-32 mx-auto mb-4">
        @include( 'svg.website' )
       </div>
@@ -39,7 +39,7 @@
       <p>{{ __( 'Let people reach your web pages immediatly to find the best of your products')}}
      </div>
 
-     <div class="w-full md:w/1/3 text-center">
+     <div class="w-full md:w/1/3 mb-12 text-center">
       <div class="w-32 mx-auto mb-4">
        @include( 'svg.landing' )
       </div>
