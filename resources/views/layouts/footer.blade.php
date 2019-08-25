@@ -1,16 +1,7 @@
 <footer class="mt-8 pt-16 pb-4">
-@guest
- <div class="container mx-auto px-6">
-  <div class="mb-4">
-   <p>{{ __( 'Ready to Get Started?' ) }}</p>
-   <p class="font-brand font-semibold text-2xl">{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</p>
-  </div>
-  <div>
-   <p><a href="{{ route( 'register' ) }}">{{ __( 'Sign up For Free' ) }}</a></p>
-  </div>
+ <div class="container mb-4 mx-auto px-6">
+  <p class="font-brand font-semibold text-2xl">{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</p>
  </div>
-
-@endguest
 
  <div class="container mx-auto px-6 flex">
   <div class="mr-4 mb-4 px-2">
