@@ -20,7 +20,7 @@
    <div class="mb-4 text-center">
     <p class="font-semibold text-2xl">{{ __( 'Begin your funnel from valuable customers' ) }}</p>
 
-    <div class="mt-8 py-8 md:flex md:justify-center md:items-center">
+    <div class="mt-8 py-8 md:flex md:justify-center">
      <div class="w-full md:w/1/3 text-center">
       <div class="w-32 mx-auto mb-4">
        @include( 'svg.tv' )
