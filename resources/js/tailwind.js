@@ -15,8 +15,16 @@ module.exports = {
     brand: [
      "Alegreya Sans",
      ...defaultTheme.fontFamily.sans
-    ]
-   }
+     ]
+    },
+    colors: {
+     "kaleskop-green": {
+      default: '#82a096'
+     }
+    },
+    height: {
+     '70-screen': '70vh'
+    }
   }
  },
  variants: {},
