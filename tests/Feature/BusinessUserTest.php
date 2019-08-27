@@ -17,7 +17,7 @@ class BusinessUserTest extends TestCase
 {
     use RefreshDatabase;
 
-    protected $planData = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
+    protected $purchased_plan = [ 'plan'=>'plan_F7VBkOHU297sxU', 'stripeToken'=>'tok_visa' ];
 
     public function test_BusinessUser_CanUploadVideos_FileExists()
     {
@@ -93,7 +93,7 @@ class BusinessUserTest extends TestCase
         $business = factory(Business::class)->create([ 'user_id'=>$user->id ]);
         $this->actingAs($user);
 
-        $response = $this->post(route('subscriptions.subscribe'), $this->planData);
+        $response = $this->post(route('subscriptions.subscribe'), $this->purchased_plan);
 
         $response->assertRedirect(route('subscriptions.index'));
         $this->assertDatabaseHas('subscriptions', [ 'business_id'=>$business->id ]);
