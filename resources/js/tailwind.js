@@ -18,8 +18,26 @@ module.exports = {
      ]
     },
     colors: {
+     "kaleskop-gold": {
+      "200": '#ffe6be',
+      "400": '#ffd694',
+      default: '#fbc56d',
+      "600": '#dca244',
+      "800": '#ba8022',
+     },
      "kaleskop-green": {
-      default: '#82a096'
+      "200": '#a9d7cd',
+      "400": '#72c1ad',
+      default: '#47a28b',
+      "600": '#2d8e76',
+      "800": '#147960'
+     },
+     "kaleskop-blue": {
+      "200": '#abc2e0',
+      "400": '#7899c4',
+      default: '#4f76ac',
+      "600": '#365d90',
+      "800": '#1e477b'
      }
     },
     height: {
