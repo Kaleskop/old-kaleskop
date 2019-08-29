@@ -1,7 +1,9 @@
 @extends( 'layouts.layout' )
 
 @section( 'body' )
- @include( 'website.header' )
+<div class="kaleskop-bg-gradient">
+
+@include( 'website.header' )
 
 <div>
  <div class="container mx-auto px-6">
@@ -14,7 +16,11 @@
  </div>
 </div>
 
-<div>
+<div class="relative">
+ @include( 'svg.spacer' )
+</div>
+
+<div class="bg-white">
  <div class="container mx-auto px-6">
   <div class="pt-32 pb-24">
    <div class="mb-4 text-center">
@@ -53,19 +59,21 @@
  </div>
 </div>
 
-<div>
+<div class="bg-white">
  <div class="container mx-auto px-6">
   <div class="py-24">
    <div class="mb-4 text-center">
     <p class="font-semibold text-2xl">{{ __( 'Spot Your Business With Kaleskop' ) }}</p>
    </div>
 
-   <a href="{{ route( 'register' ) }}" class="cursor-pointer whitespace-nowrap block w-full md:w-1/2 md:mx-auto py-4 px-6 rounded tracking-wide font-medium text-center text-2xl shadow-md text-black bg-yellow-600">{{ __( 'Start Now For Free' ) }}</a>
+   <a href="{{ route( 'register' ) }}" class="cursor-pointer whitespace-nowrap block w-full md:w-1/2 md:mx-auto py-4 px-6 rounded tracking-wide font-medium text-center text-2xl shadow-md text-black bg-kaleskop-gold">{{ __( 'Start Now For Free' ) }}</a>
   </div>
  </div>
 </div>
 
- @include( 'layouts.footer' )
+@include( 'layouts.footer' )
+
+</div>
 
 @endsection
 
