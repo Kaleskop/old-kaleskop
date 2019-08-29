@@ -1,4 +1,4 @@
-<footer class="mt-8 pt-16 pb-4">
+<footer class="mt-8 pt-16 pb-4 bg-white">
  <div class="container mb-4 mx-auto px-6">
   <p class="font-brand font-semibold text-2xl">{{ config( 'app.name' ) }}. {{ __( 'We Advertise!' ) }}</p>
  </div>
