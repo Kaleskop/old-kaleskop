@@ -71,4 +71,14 @@ class Adv extends Model {
  public function video() {
   return $this->belongsTo( Video::class, 'video_id' );
  }
+
+    // - helpers
+
+    /**
+     * Get the business folder path
+     */
+    public function getFolderPath(...$path): string
+    {
+        return "{$this->owner->folder}/".implode(DIRECTORY_SEPARATOR, $path);
+    }
 }
