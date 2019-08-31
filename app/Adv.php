@@ -24,7 +24,7 @@ class Adv extends Model {
   *
   * @var array
   */
- protected $fillable = [ 'video_id', 'title', 'endpoint', 'clicks', 'published_at' ];
+ protected $fillable = [ 'video_id', 'title', 'endpoint', 'cover_path', 'clicks', 'published_at' ];
 
  /**
   * The attributes that should be cast to native types.
