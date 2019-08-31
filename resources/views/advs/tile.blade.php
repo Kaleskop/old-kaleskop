@@ -1,10 +1,10 @@
 <article class="mb-4 p-2 border-2 border-black">
  <div class="w-full sm:flex">
-  <div class="w-full sm:w-1/4 mr-4">
-   <img src="{{ $adv->cover_path }}" alt="Advertisement cover image" />
+  <div class="w-full sm:w-32 mr-4">
+   <img src="{{ $adv->storageUrl }}" alt="Advertisement cover image" />
   </div>
 
-  <div>
+  <div class="flex-1">
    <header class="mb-4 flex items-center">
     <h3 class="mr-4 font-medium text-2xl">{{ $adv->title }}</h3>
 
