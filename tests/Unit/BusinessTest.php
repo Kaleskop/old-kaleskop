@@ -70,4 +70,19 @@ class BusinessTest extends TestCase
 
         $this->assertTrue($business->isOverLimit());
     }
+
+    public function test_Business_GetFolderPath_Same()
+    {
+        Storage::fake('s3');
+
+        $business = factory(Business::class)->create();
+
+        $path = $business->getFolderPath();
+
+        $this->assertSame($path, "{$business->folder}/");
+
+        $path = $business->getFolderPath('videos', 'filename.js');
+
+        $this->assertSame($path, "{$business->folder}/videos/filename.js");
+    }
 }
