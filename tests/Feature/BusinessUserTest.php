@@ -62,12 +62,17 @@ class BusinessUserTest extends TestCase
         $business = factory(Business::class)->create([ 'user_id'=>$user->id ]);
         $this->actingAs($user);
         $video = factory(Video::class)->create([ 'business_id'=>$business->id ]);
+        $file = UploadedFile::fake()->create('fakeimage.jpg', 600);
 
         $adv = factory(Adv::class)->make([ 'video_id'=>$video->id ]);
-        $response = $this->post(route('advs.store'), $adv->toArray());
+        $data = $adv->toArray();
+        $data['userimage'] = $file;
+        $response = $this->post(route('advs.store'), $data);
 
+        $path = "{$business->folder}/images/{$file->hashName()}";
         $response->assertRedirect(route('advs.index'));
-        $this->assertDatabaseHas('advs', [ 'title'=>$adv->title ]);
+        $this->assertDatabaseHas('advs', [ 'title'=>$data['title'], 'cover_path'=>$path ]);
+        Storage::disk('s3')->assertExists($path);
     }
 
     public function test_BusinessUser_CanDeleteAnAdvertisement_SoftDeleted()
