@@ -132,4 +132,14 @@ class Business extends Model {
   ];
   $this->createAsStripeCustomer( $customer );
  }
+
+    /**
+     * Get the business folder path
+     * 
+     * @var string
+     */
+    public function getFolderPath(...$path): string
+    {
+        return "{$this->folder}/".implode(DIRECTORY_SEPARATOR, $path);
+    }
 }
