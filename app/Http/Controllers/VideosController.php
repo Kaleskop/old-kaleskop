@@ -27,9 +27,8 @@ class VideosController extends Controller {
 
   $video = $request->file( 'uservideo' );
   $business = $request->user()->business;
-  $basepath = "{$business->folder}/videos";
 
-  $path = $video->store( $basepath, 's3' );
+  $path = $video->store( $business->getFolderPath('videos'), 's3' );
 
   $model = [
    'name'    => $video->getClientOriginalName(),
