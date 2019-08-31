@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 use App\Traits\HasClicks;
 use App\Traits\Publishable;
+use Storage;
 
 class Adv extends Model {
 
@@ -39,6 +40,18 @@ class Adv extends Model {
   * @var array
   */
  protected $with = [ 'video' ];
+
+    // - accessors
+
+    /**
+     * Get the storage url attribute
+     *
+     * @return string
+     */
+    public function getStorageUrlAttribute()
+    {
+        return $this->getStorageUrl();
+    }
 
  /**
   * Register methods when booting model
@@ -80,5 +93,13 @@ class Adv extends Model {
     public function getFolderPath(...$path): string
     {
         return "{$this->owner->folder}/".implode(DIRECTORY_SEPARATOR, $path);
+    }
+
+    /**
+     * Get the storage url
+     */
+    public function getStorageUrl($minutes = 1)
+    {
+        return Storage::disk('s3')->temporaryUrl($this->cover_path, now()->addMinutes($minutes));
     }
 }
