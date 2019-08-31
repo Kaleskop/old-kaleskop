@@ -1,7 +1,7 @@
 <template>
 
 <div>
- <button class="publish-button relative cursor-pointer w-2 h-2 rounded-full" v-on:click.prevent="toggle" v-bind:class="[ isPublished ? 'published' : '' ]">
+ <button class="publish-button" v-on:click.prevent="toggle" v-bind:class="[ isPublished ? 'published' : '' ]">
   <span v-if="isPublished">Unpublish</span>
   <span v-else>Publish</span>
  </button>
