@@ -7,11 +7,15 @@
   <div class="flex-1">
    <header class="mb-4 flex items-center">
     <h3 class="mr-4 font-medium text-2xl">{{ $adv->title }}</h3>
-
-    <publish-button endpoint="{{ route( 'advs.publish', $adv ) }}"{{ $adv->isPublished() ? ' published' : '' }}></publish-button>
    </header>
 
-   <p class="font-light text-sm">{{ $adv->endpoint }}</p>
+   <footer class="flex justify-between">
+    <p class="font-light text-sm">{{ $adv->endpoint }}</p>
+
+    <div>
+     <publish-button endpoint="{{ route( 'advs.publish', $adv ) }}"{{ $adv->isPublished() ? ' published' : '' }}></publish-button>
+    </div>
+   </footer>
   </div>
  </div>
 </article>
