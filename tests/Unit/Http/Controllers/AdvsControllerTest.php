@@ -52,4 +52,18 @@ class AdvsControllerTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewHas('page', 'advs.create-page');
     }
+
+    public function test_Advs_AuthUserWithBusinessCanUploadACover_FileExists()
+    {
+        Storage::fake('s3');
+
+        $user = factory(User::class)->create();
+        $business = factory(Business::class)->create([ 'user_id'=>$user->id ]);
+        $this->actingAs($user);
+
+        $file = UploadedFile::fake()->create('fakeimage.jpg', 600);
+        $response = $this->post(route('advs.upload'), [ 'userimage'=>$file ]);
+
+        Storage::disk('s3')->assertExists("{$business->folder}/images/{$file->hashName()}");
+    }
 }

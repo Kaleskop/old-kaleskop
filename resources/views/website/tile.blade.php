@@ -1,3 +1,8 @@
-<article class="mb-6 p-2 w-full hover:shadow-lg">
- <h4 class="mb-2 font-medium text-xl text-center"><a href="{{ route( 'website.advs', $adv ) }}">{{ $adv->title }}</a></h4>
-</article>
+<div class="w-full sm:w-1/2 md:w-1/4 mb-6 p-2">
+ <a href="{{ route( 'website.advs', $adv ) }}" class="block bg-white">
+  <article class="hover:shadow-lg">
+   <img src="{{ $adv->storageUrl }}" alt="Advertisement cover image" />
+   <h4 class="p-2 font-medium text-xl text-center">{{ $adv->title }}</h4>
+  </article>
+ </a>
+</div>

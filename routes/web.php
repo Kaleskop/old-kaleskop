@@ -43,6 +43,7 @@ Route::get( '/videos/create', 'VideosController@create' )->name( 'videos.create'
 // Advs
 Route::post( '/advs/store', 'AdvsController@store' )->name( 'advs.store' );
 Route::post( '/advs/{adv}/publish', 'AdvsController@publish' )->name( 'advs.publish' );
+Route::post('/advs/upload', 'AdvsController@upload')->name('advs.upload');
 Route::delete( '/advs/{adv}', 'AdvsController@destroy' )->name( 'advs.destroy' );
 Route::delete( '/advs/{adv}/publish', 'AdvsController@unpublish' )->name( 'advs.unpublish' );
 Route::get( '/advs', 'AdvsController@index' )->name( 'advs.index' );

@@ -15,6 +15,16 @@ class AdvTest extends TestCase
 
     public function test_Adv_GetFolderPath_Same()
     {
-        $this->assertTrue(true);
+        Storage::fake('s3');
+
+        $adv = factory(Adv::class)->create();
+
+        $path = $adv->getFolderPath('images');
+
+        $this->assertSame($path, "{$adv->owner->folder}/images");
+
+        $path = $adv->getFolderPath('videos', 'file.mp4');
+
+        $this->assertSame($path, "{$adv->owner->folder}/videos/file.mp4");
     }
 }
