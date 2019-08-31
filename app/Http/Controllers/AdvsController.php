@@ -15,18 +15,29 @@ class AdvsController extends Controller {
   $this->middleware( 'business' );
  }
 
- public function store( Request $request ) {
-  $this->validate( $request, [
-   'video_id' => [ 'required' ],
-   'title'    => [ 'required', 'string', 'max:255' ],
-   'endpoint' => [ 'required', 'string', 'max:255' ],
-  ] );
+    public function store(Request $request)
+    {
+        $this->validate( $request, [
+            'video_id'=>[ 'required' ],
+            'title'=>[ 'required', 'string', 'max:255' ],
+            'endpoint'=>[ 'required', 'string', 'max:255' ],
+            'userimage'=>[ 'required', 'image' ],
+        ]);
 
-  $business = $request->user()->business;
-  $adv = $business->advs()->create( $request->all() );
+        $business = $request->user()->business;
+        $cover = $request->file('userimage');
+        $path = $cover->store($business->getFolderPath('images'), 's3');
 
-  return redirect()->route( 'advs.index' );
- }
+        $model = [
+            'video_id'=>$request->input('video_id'),
+            'title'=>$request->input('title'),
+            'endpoint'=>$request->input('title'),
+            'cover_path'=>$path
+        ];
+        $adv = $business->advs()->create($model);
+
+        return redirect()->route('advs.index');
+    }
 
  public function destroy( Adv $adv ) {
   $adv->delete();
@@ -54,6 +65,23 @@ class AdvsController extends Controller {
   return back();
  }
 
+    public function upload(Request $request)
+    {
+        $this->validate($request, [
+            'userimage'=>[ 'required', 'image' ]
+        ]);
+
+        $image = $request->file('userimage');
+        $business = $request->user()->business;
+
+        $path = $image->store($business->getFolderPath('images'), 's3');
+
+        if ($request->wantsJson()) {
+            return response()->json([ 'path'=>$path ]);
+        }
+
+        return back();
+    }
 
  // - view actions
 
