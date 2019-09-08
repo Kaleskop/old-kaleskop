@@ -31,7 +31,7 @@ class AdvsController extends Controller {
         $model = [
             'video_id'=>$request->input('video_id'),
             'title'=>$request->input('title'),
-            'endpoint'=>$request->input('title'),
+            'endpoint'=>$request->input('endpoint'),
             'cover_path'=>$path
         ];
         $adv = $business->advs()->create($model);
